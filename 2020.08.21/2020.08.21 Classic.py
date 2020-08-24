@@ -13,11 +13,6 @@ CENTER = (150, 150)
 n_sides = 3
 post_weight = 0.3333
 
-def reset() :
-    global n_sides, post_weight
-    n_sides = 3
-    post_weight = 0.3333
-
 def draw(canvas):
     global HEIGHT, WIDTH, CENTER, n_sides, post_weight
     
@@ -126,9 +121,7 @@ def p_vertices(angle, n, radius) :
 # Create frame.
 frame = simplegui.create_frame("Hamster Pen", WIDTH, HEIGHT)
 frame.set_draw_handler(draw)
-#frame.set_keydown_handler(keydown)
-#frame.set_keyup_handler(keyup)
+label = frame.add_label('Maximize the Hamster Pen Area!', 200)
 
 # Start frame.
-reset()
 frame.start()
