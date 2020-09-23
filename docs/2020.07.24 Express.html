@@ -13160,14 +13160,9 @@ $$\sum_{n=1}^{10} (10n+1) = \Big(10\sum_{n=1}^{10}n\Big) + 10 = 560 $$</p>
 <p>The number of electoral votes can be expressed as :
 $$V(n) = n + 2$$</p>
 <p>And the total number of votes is :</p>
-$$\sum_{n=1}^{10} (n+2) = \Big(\sum_{n=1}^{10}n\Big) + 20 = 75
-
-The majority cutoff for electoral votes is $38$.    The sum of the three largest shires is too small $(10 + 11 + 12 = 33)$ and the sum of the seven smallest shires is too large $(3 + 4 + 5 + 6 + 7 + 8 + 9 = 42)$.  In order to achieve exactly $38$, either four, five, or six shires is necessary.
-
-The cutoff for majority of the population for each *n-shire* is :
-
-$$<p>M(n) = 5n + 1$$</p>
-<p>In order to minimize the percentage of the popular vote, assume exactly the cutoff majority voting population, which means the weight of each constituent for <em>n-shire</em> is :</p>
+$$\sum_{n=1}^{10} (n+2) = \Big(\sum_{n=1}^{10}n\Big) + 20 = 75$$<p>The majority cutoff for electoral votes is $38$.    The sum of the three largest shires is too small $(10 + 11 + 12 = 33)$ and the sum of the seven smallest shires is too large $(3 + 4 + 5 + 6 + 7 + 8 + 9 = 42)$.  In order to achieve exactly $38$, either four, five, or six shires is necessary.</p>
+<p>The cutoff for majority of the population for each <em>n-shire</em> is :</p>
+$$M(n) = 5n + 1$$<p>In order to minimize the percentage of the popular vote, assume exactly the cutoff majority voting population, which means the weight of each constituent for <em>n-shire</em> is :</p>
 $$V(n) = \frac {V(n)}{M(n)} = \frac{n + 2}{5n + 1} = \frac{n + \frac{1}{5}}{5n + 1} + \frac{\frac{9}{5}}{5n + 1} = \frac{1}{5} + \frac{9}{25n+5}$$<p>It follows that smaller shire constituents have more weight than that of larger shires.  Making a coalition of six shires,</p>
 $$s_1, s_2, s_3, s_4, s_5, s_6$$<p>the respective sum of their votes can be expressed as:</p>
 $$CoalitionVotes = 38 = \sum_{k=1}^6 V(s_k) = \sum_{k=1}^6 (s_k + 2) = 12 + \sum_{k=1}^6 s_k$$$$\sum_{k=1}^6 s_k = 26$$<p>The population of that coalition can be expressed as :</p>
