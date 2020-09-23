@@ -13084,13 +13084,43 @@ div#notebook {
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>A more generalized problem is to look at a ruler of length $r$ split at $n$ points, and to find the average length of the piece that contains $\frac{r}{2}$.</p>
 <p>Since the $n$ points are sliced randomly, it follows that the number of points before and after $\frac{r}{2}$ is a binomial distribution.  That is, the probability that $k$ points are in $(0, \frac{r}{2})$ and $n-k$ points are in $(\frac{r}{2}, r)$ is $\frac{n \choose k}{2^n}$.</p>
 <p>Note that $j$ points randomly distributed between $a$ and $b$ create $j+1$ pieces of average length $\frac{b-a}{j+1}$.</p>
-<p>Given that $k$ points are in $(0, \frac{r}{2})$ and $n-k$ points are in $(\frac{r}{2}, r)$, the average length from the $k^{th}$ point to $\frac{r}{2}$ is:</p>
-$$\frac{\frac{r}{2} - 0}{k+1}$$$$= \frac{r}{2(k+1)}$$<p>Similarly, the average length from $\frac{r}{2}$ to the $(k+1)^{th}$ point is:</p>
-$$\frac{r - \frac{r}{2}}{n-k+1}$$$$= \frac{r}{2(n-k+1)}$$<p><br>
-Thus, the average length of all pieces containing the middle is:</p>
-$$\sum_{k=0}^{n} \frac{n \choose k}{2^n} \times \Big(\frac{r}{2(n-k+1)} + \frac{r}{2(k+1)} \Big)$$$$= \frac{r}{2^{n+1}}\sum_{k=0}^{n} {n \choose k} \times \Big(\frac{(k+1) + (n-k+1)}{(n-k+1)(k+1)}\Big)$$$$= \frac{r}{2^{n+1}}\sum_{k=0}^{n} \frac{n!}{(n-k)!k!} \times \frac{n+2}{(n-k+1)(k+1)}$$$$= \frac{r}{2^{n+1}} \times \frac{1}{n+1}\sum_{k=0}^{n} \frac{n!(n+1)(n+2)}{(n-k)!(n-k+1)k!(k+1)}$$$$= \frac{r}{2^{n+1}(n+1)} \sum_{k=0}^{n} \frac{(n+2)!}{(n-k+1)!(k+1)!}$$<p><br>
-Note that the $0^{th}$ and $(n+2)^{th}$ terms are missing from ${n+2} \choose k$.</p>
-$$= \frac{r}{2^{n+1}(n+1)} \Bigg(\bigg(\sum_{k=0}^{n+2} {{n+2} \choose k} \bigg) - {{n+2} \choose 0} - {{n+2} \choose {n+2}} \Bigg)$$$$= \frac{r}{2^{n+1}(n+1)} (2^{n+2} - 2)$$$$= \frac{r}{n+1} \Big(\frac{2^{n+1} - 1}{2^n} \Big)$$<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>For $r=12$ and $n=3$, the average length of the piece containing the 6-inch mark is:
+<p>Given that $k$ points are in $(0, \frac{r}{2})$ and $n-k$ points are in $(\frac{r}{2}, r)$, the average length from the $k^{th}$ point to $\frac{r}{2}$ is:
+<br>
+<br>
+$$\frac{\frac{r}{2} - 0}{k+1}$$
+<br>
+$$= \frac{r}{2(k+1)}$$
+<br>
+Similarly, the average length from $\frac{r}{2}$ to the $(k+1)^{th}$ point is:
+<br>
+<br>
+$$\frac{r - \frac{r}{2}}{n-k+1}$$
+<br>
+$$= \frac{r}{2(n-k+1)}$$
+<br>
+Thus, the average length of all pieces containing the middle is:
+<br>
+<br>
+$$\sum_{k=0}^{n} \frac{n \choose k}{2^n} \times \Big(\frac{r}{2(n-k+1)} + \frac{r}{2(k+1)} \Big)$$
+<br>
+$$= \frac{r}{2^{n+1}}\sum_{k=0}^{n} {n \choose k} \times \Big(\frac{(k+1) + (n-k+1)}{(n-k+1)(k+1)}\Big)$$
+<br>
+$$= \frac{r}{2^{n+1}}\sum_{k=0}^{n} \frac{n!}{(n-k)!k!} \times \frac{n+2}{(n-k+1)(k+1)}$$
+<br>
+$$= \frac{r}{2^{n+1}} \times \frac{1}{n+1}\sum_{k=0}^{n} \frac{n!(n+1)(n+2)}{(n-k)!(n-k+1)k!(k+1)}$$
+<br>
+$$= \frac{r}{2^{n+1}(n+1)} \sum_{k=0}^{n} \frac{(n+2)!}{(n-k+1)!(k+1)!}$$
+<br>
+Note that the $0^{th}$ and $(n+2)^{th}$ terms are missing from ${n+2} \choose k$.
+<br>
+<br>
+$$= \frac{r}{2^{n+1}(n+1)} \Bigg(\bigg(\sum_{k=0}^{n+2} {{n+2} \choose k} \bigg) - {{n+2} \choose 0} - {{n+2} \choose {n+2}} \Bigg)$$
+<br>
+$$= \frac{r}{2^{n+1}(n+1)} (2^{n+2} - 2)$$
+<br>
+$$= \frac{r}{n+1} \Big(\frac{2^{n+1} - 1}{2^n} \Big)$$</p>
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>For $r=12$ and $n=3$, the average length of the piece containing the 6-inch mark is:
+<br>
 $$= \frac{45}{8} = 5.625in$$</p>
 
 </div>
