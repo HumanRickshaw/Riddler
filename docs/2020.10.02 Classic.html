@@ -13083,17 +13083,32 @@ div#notebook {
 <p>What are the chances that the <em>last</em> chocolate I eat is milk chocolate?</p>
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Define a function $B(d, m)$ which represents a $bag$ containing $d$ dark chocolates and $m$ milk chocolates.  Applying the eating algorithm described, the function returns the probability that the last chocolate is milk chocolate.</p>
 <p>For $B(d, m)$, $d &gt; 0$ and $m &gt; 0$, two cases are defined.</p>
-<h3 id="Case-I.">Case I.<a class="anchor-link" href="#Case-I.">&#182;</a></h3><h4 id="There-are-only-two-scenarios-where-there-is-only-one-change-in-chocolate-type.">There are only two scenarios where there is only one change in chocolate type.<a class="anchor-link" href="#There-are-only-two-scenarios-where-there-is-only-one-change-in-chocolate-type.">&#182;</a></h4><p>The probability of eating all dark chocolates then all white chocolates ($d...dm...m$) is :<br></p>
-$$\frac{d}{d+m} \times \frac{d-1}{d+m-1} \times \frac{d-2}{d+m-2} \times ... \times \frac{1}{m+1} = \frac{d!m!}{(d+m)!}$$<p>Similarly, the probability of eating all white chocolates then all dark chocolates ($m...md...d$) is :<br></p>
-$$\frac{m}{d+m} \times \frac{m-1}{d+m-1} \times \frac{m-2}{d+m-2} \times ... \times \frac{1}{d+1} = \frac{d!m!}{(d+m)!}$$<p>These probabilities are equal.</p>
-<h3 id="Case-II.">Case II.<a class="anchor-link" href="#Case-II.">&#182;</a></h3><h4 id="Every-remaining-chocolate-selection-scenarios-have-at-least-two-change-in-chocolate-type.">Every remaining chocolate selection scenarios have at least two change in chocolate type.<a class="anchor-link" href="#Every-remaining-chocolate-selection-scenarios-have-at-least-two-change-in-chocolate-type.">&#182;</a></h4><p>For $B(d, m)$, the probability of choosing $i$, $1 &lt; i &lt; d$, dark chocolates before choosing a milk chocolate is :<br></p>
-$$\frac{d}{d+m} \times \frac{d-1}{d+m-1} \times \frac{d-2}{d+m-2} \times ... \times \frac{d - (i-1)}{d+m-(i-1)} \times \frac{m}{d+m-i}$$<p><br>
+<h3 id="Case-I.">Case I.<a class="anchor-link" href="#Case-I.">&#182;</a></h3><h4 id="There-are-only-two-scenarios-where-there-is-only-one-change-in-chocolate-type.">There are only two scenarios where there is only one change in chocolate type.<a class="anchor-link" href="#There-are-only-two-scenarios-where-there-is-only-one-change-in-chocolate-type.">&#182;</a></h4><p>The probability of eating all dark chocolates then all white chocolates ($d...dm...m$) is :
+<br>
+<br>
+$$\frac{d}{d+m} \times \frac{d-1}{d+m-1} \times \frac{d-2}{d+m-2} \times ... \times \frac{1}{m+1} = \frac{d!m!}{(d+m)!}$$
+<br>
+Similarly, the probability of eating all white chocolates then all dark chocolates ($m...md...d$) is :
+<br>
+<br>
+$$\frac{m}{d+m} \times \frac{m-1}{d+m-1} \times \frac{m-2}{d+m-2} \times ... \times \frac{1}{d+1} = \frac{d!m!}{(d+m)!}$$
+<br>
+These probabilities are equal.</p>
+<h3 id="Case-II.">Case II.<a class="anchor-link" href="#Case-II.">&#182;</a></h3><h4 id="Every-remaining-chocolate-selection-scenarios-have-at-least-two-change-in-chocolate-type.">Every remaining chocolate selection scenarios have at least two change in chocolate type.<a class="anchor-link" href="#Every-remaining-chocolate-selection-scenarios-have-at-least-two-change-in-chocolate-type.">&#182;</a></h4><p>For $B(d, m)$, the probability of choosing $i$, $1 &lt; i &lt; d$, dark chocolates before choosing a milk chocolate is :
+<br>
+<br>
+$$\frac{d}{d+m} \times \frac{d-1}{d+m-1} \times \frac{d-2}{d+m-2} \times ... \times \frac{d - (i-1)}{d+m-(i-1)} \times \frac{m}{d+m-i}$$
+<br>
 $$ = \frac{\frac{d!}{(d-i)!}}{\frac{(d+m)!}{(d+m-i)!}} \times \frac{m}{d+m-i}$$</p>
-<p><br></p>
-<p>For $B(d, m)$, the probability of choosing $j$, $1 &lt; j &lt; m$, milk chocolates before choosing a dark chocolate is :<br></p>
-$$\frac{m}{d+m} \times \frac{m-1}{d+m-1} \times \frac{m-2}{d+m-2} \times ... \times \frac{m - (j-1)}{d+m-(j-1)} \times \frac{d}{d+m-j}$$<p><br>
-$$ = \frac{\frac{m!}{(m-j)!}}{\frac{(d+m)!}{(d+m-j)!}} \times \frac{d}{d+m-j}$$</p>
 <p><br>
+For $B(d, m)$, the probability of choosing $j$, $1 &lt; j &lt; m$, milk chocolates before choosing a dark chocolate is :
+<br>
+<br>
+$$\frac{m}{d+m} \times \frac{m-1}{d+m-1} \times \frac{m-2}{d+m-2} \times ... \times \frac{m - (j-1)}{d+m-(j-1)} \times \frac{d}{d+m-j}$$
+<br>
+$$ = \frac{\frac{m!}{(m-j)!}}{\frac{(d+m)!}{(d+m-j)!}} \times \frac{d}{d+m-j}$$
+<br>
+<br>
 Therefore, $$B(d, m) = \sum_{i = 1}^{d-1}{\frac{\frac{d!}{(d-i)!}}{\frac{(d+m)!}{(d+m-i)!}} \times \frac{m}{d+m-i} \times B(d-i, m)} + \sum_{j = 1}^{m-1}{\frac{\frac{m!}{(m-j)!}}{\frac{(d+m)!}{(d+m-j)!}} \times \frac{d}{d+m-j} \times B(d, m-j)} + \frac{d!m!}{(d+m)!}$$</p>
 <p><br></p>
 <p>Notice that this answer would be exactly the same if $B(d, m)$ were defined as returning the <em>probability that the last chocolate is dark chocolate</em>.</p>
