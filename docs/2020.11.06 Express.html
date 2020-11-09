@@ -13081,7 +13081,7 @@ div#notebook {
 <p>Suppose, while training, Santul completed two 20-mile runs on a treadmill. For the first run, he set the treadmill to a constant speed so that he ran every mile in 9 minutes.</p>
 <p>The second run was a little different. He started at a 10 minute-per-mile pace and accelerated continuously until he was running at an 8-minute-per mile pace at the end. Moreover, Santul’s minutes-per-mile pace (i.e., not his speed) changed linearly over time. So a quarter of the way through the duration (in time, not distance) of the run, his pace was 9 minutes, 30 seconds per mile, halfway through it was 9 minutes per mile, etc.</p>
 <p>Which training run was faster (i.e., took less time) overall? And what were Santul’s times for the two runs?</p>
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><h3 id="Constant-9-min/mile">Constant 9 min/mile<a class="anchor-link" href="#Constant-9-min/mile">&#182;</a></h3><p>Change in position is the integral of speed over time:</p>
+<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><h3 id="First-Run:-Constant-9-min/mile">First Run: Constant 9 min/mile<a class="anchor-link" href="#First-Run:-Constant-9-min/mile">&#182;</a></h3><p>Change in position is the integral of speed over time:</p>
 $$\Delta X = \int_{}^{} S dt$$<p>Santul's total time for 20 miles at a rate $R(t) = 9$:</p>
 $$20 =\int_{0}^{T} \frac{1}{9} dt$$<p><br>
 $$= \frac{T}{9}$$
@@ -13094,7 +13094,7 @@ $$T = 20 \textrm{ miles} * \frac{9 \textrm{ minutes}}{\textrm{mile}} = 180 \text
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Continously-accelerating-from-10-min/mile-to-8-min/mile">Continously accelerating from 10 min/mile to 8 min/mile<a class="anchor-link" href="#Continously-accelerating-from-10-min/mile-to-8-min/mile">&#182;</a></h3><p>Using $(0, 10)$ and $(T, 8)$:</p>
+<h3 id="Second-Run:-Continously-accelerating-from-10-min/mile-to-8-min/mile">Second Run: Continously accelerating from 10 min/mile to 8 min/mile<a class="anchor-link" href="#Second-Run:-Continously-accelerating-from-10-min/mile-to-8-min/mile">&#182;</a></h3><p>Using $(0, 10)$ and $(T, 8)$:</p>
 $$R(t) = - \frac{2}{T} t + 10 = \frac{10T- 2t}{T}$$<p><br>
 Santul's total time for 20 miles at this varying rate $R(t)$:</p>
 $$\Delta X = \int_{}^{} S dt$$<p><br>
