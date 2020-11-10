@@ -13077,7 +13077,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Train-Constantly-or-Accelerate?">Train Constantly or Accelerate?<a class="anchor-link" href="#Train-Constantly-or-Accelerate?">&#182;</a></h1><h2 id="Riddler-Express"><a href="https://fivethirtyeight.com/features/can-you-make-an-unfair-coin-fair/">Riddler Express</a><a class="anchor-link" href="#Riddler-Express">&#182;</a></h2><p>Last weekend’s New York City Marathon was canceled. But runners from <a href="https://www.nytimes.com/2020/11/01/sports/New-York-City-Marathon-des-linden.html">Des Linden</a> — one of the top American marathoners — to FiveThirtyEight’s own Santul Nerkar — my number one editor — still went out there and braved the course. Santul finished in a time of <a href="https://twitter.com/SantulN/status/1322597861314494465">3:41:43</a> (3 hours, 41 minutes, 43 seconds), which averaged to 8 minutes, 27 seconds per mile.</p>
+<h1 id="Train-at-a-Constant-Rate...or-Accelerate?">Train at a Constant Rate...or Accelerate?<a class="anchor-link" href="#Train-at-a-Constant-Rate...or-Accelerate?">&#182;</a></h1><h2 id="Riddler-Express"><a href="https://fivethirtyeight.com/features/can-you-make-an-unfair-coin-fair/">Riddler Express</a><a class="anchor-link" href="#Riddler-Express">&#182;</a></h2><p>Last weekend’s New York City Marathon was canceled. But runners from <a href="https://www.nytimes.com/2020/11/01/sports/New-York-City-Marathon-des-linden.html">Des Linden</a> — one of the top American marathoners — to FiveThirtyEight’s own Santul Nerkar — my number one editor — still went out there and braved the course. Santul finished in a time of <a href="https://twitter.com/SantulN/status/1322597861314494465">3:41:43</a> (3 hours, 41 minutes, 43 seconds), which averaged to 8 minutes, 27 seconds per mile.</p>
 <p>Suppose, while training, Santul completed two 20-mile runs on a treadmill. For the first run, he set the treadmill to a constant speed so that he ran every mile in 9 minutes.</p>
 <p>The second run was a little different. He started at a 10 minute-per-mile pace and accelerated continuously until he was running at an 8-minute-per mile pace at the end. Moreover, Santul’s minutes-per-mile pace (i.e., not his speed) changed linearly over time. So a quarter of the way through the duration (in time, not distance) of the run, his pace was 9 minutes, 30 seconds per mile, halfway through it was 9 minutes per mile, etc.</p>
 <p>Which training run was faster (i.e., took less time) overall? And what were Santul’s times for the two runs?</p>
@@ -13100,9 +13100,9 @@ Santul's total time for 20 miles at this varying rate $R(t)$:</p>
 $$\Delta X = \int_{}^{} S dt$$<p><br>
 $$20 = \int_{0}^{T} \frac{dt}{R(t)}$$
 <br>
-$$ = \int_{0}^{T} \frac{-Tdt}{10T- 2t}$$
+$$ = \int_{0}^{T} \frac{Tdt}{10T- 2t}$$
 <br>
-$$ = \frac{-T}{2} \int_{0}^{T} \frac{dt}{5T - t}$$
+$$ = \frac{-T}{2} \int_{0}^{T} \frac{-1 \cdot dt}{5T - t}$$
 <br>
 $$ = \frac{-T}{2} \ln{(5T - t)}\big]_{0}^{T}$$
 <br>
@@ -13112,8 +13112,10 @@ $$ = \frac{T \cdot ln{\frac{5}{4}}}{2}$$
 <br>
 $$T = \frac{20 \cdot 2}{ln{\frac{5}{4}}} \approx 179.256 \textrm{ minutes}$$</p>
 <h2 id="Plot">Plot<a class="anchor-link" href="#Plot">&#182;</a></h2><p>Knowing $T$, we can now solve for $t$:</p>
-$$d = \frac{T}{2} \cdot \ln{\frac{5T}{5T-t}}$$<p><br>
-$$\frac{2d}{T} = \ln{\frac{5T}{5T-t}}$$
+$$d = \frac{-T}{2} \cdot \ln{\bigg(\frac{5T-t}{5T}\bigg)}$$<p><br>
+$$d = \frac{T}{2} \cdot \ln{\bigg(\frac{5T-t}{5T}\bigg)}$$
+<br>
+$$\frac{2d}{T} = \ln{\bigg(\frac{5T-t}{5T}\bigg)}$$
 <br>
 $$e^{\frac{2d}{T}} = \frac{5T}{5T-t}$$
 <br>
