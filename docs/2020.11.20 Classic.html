@@ -13123,7 +13123,7 @@ $$= \frac{k+1}{k+2}$$</p>
 <h4 id="For-m-=-$k-+-1$.">For m = $k + 1$.<a class="anchor-link" href="#For-m-=-$k-+-1$.">&#182;</a></h4><p>For a $sauced$ arc of $k+1$ individuals, we will look at the two possibilities of the bowl being at the left most and right most ends of the arc.</p>
 <h5 id="Case-1-(Left-most):">Case 1 (Left most):<a class="anchor-link" href="#Case-1-(Left-most):">&#182;</a></h5><p><img src="II4.png" alt = "assumed saucing" width="300" height="300"></p>
 <p>Using $m = k$ above and the probabilities from Proof I. for the next new recepient, the above illustration above can be achieved by:</p>
-<p>(For any of the $k$ scenarios) * (Left most of $sauced$ arc and next new recepient being left + Right most of $sauced$ arc and next new recepient being left)</p>
+<p>(One of the $k$ locations for <em>you</em>) * (Left most of $sauced$ arc and next new recepient being left + Right most of $sauced$ arc and next new recepient being left)</p>
 $$ = \frac{1}{k} \cdot \bigg(\frac{k-i-1}{k-1} \cdot \frac{k}{k+1} + \frac{i}{k-1} \cdot \frac{1}{k+1}\bigg)$$<p>
 <br/>
 $$ = \frac{1}{k} \cdot \bigg(\frac{k^2-ik-k+1}{(k-1)(k+1)}\bigg)$$
@@ -13132,10 +13132,10 @@ $$ = \frac{(k-i)(k-1)}{(k-1)k(k+1)}$$
 <br/>
 $$ = \frac{(k-i)}{k(k+1)}$$
 <br/>
-$$ = \frac{((k+1)-i-1)}{(k+1)-1} \textrm{with probability} \frac{1}{k+1}$$</p>
+$$ = \frac{((k+1)-i-1)}{(k+1)-1} \textrm{with probability of *your* location being} \frac{1}{k+1}$$</p>
 <h5 id="Case-2-(Right-most):">Case 2 (Right most):<a class="anchor-link" href="#Case-2-(Right-most):">&#182;</a></h5><p><img src="II5.png" alt = "assumed saucing" width="300" height="300"></p>
 <p>Similarly:</p>
-<p>(For any of the $k$ scenarios) * (Left most of $sauced$ arc and next new recepient being right + Right most of $sauced$ arc and next new recepient being right)</p>
+<p>(One of the $k$ locations for <em>you</em>) * (Left most of $sauced$ arc and next new recepient being right + Right most of $sauced$ arc and next new recepient being right)</p>
 $$ = \frac{1}{k} \cdot \bigg(\frac{k-i-1}{k-1} \cdot \frac{1}{k+1} + \frac{i}{k-1} \cdot \frac{k}{k+1}\bigg)$$<p>
 <br/>
 $$ = \frac{1}{k} \cdot \bigg(\frac{ik+k-i-1}{(k-1)(k+1)}\bigg)$$
@@ -13144,7 +13144,7 @@ $$ = \frac{(i+1)(k-1)}{(k-1)k(k+1)}$$
 <br/>
 $$ = \frac{(i+1)}{k(k+1)}$$
 <br/>
-$$ = \frac{(i+1)}{(k+1)-1} \textrm{with probability} \frac{1}{k+1}$$</p>
+$$ = \frac{(i+1)}{(k+1)-1} \textrm{with probability of *your* location being} \frac{1}{k+1}$$</p>
 <p>Note that $i+1$ represents one more individual to the right of <em>you</em>.</p>
 <p>Note that Case 1 and Case 2 hold when $i = k-1$ or $i = 0$, that is, the two exceptions where <em>you</em> are at the left most or right most end of the <em>sauced</em> arc.</p>
 <p>If $m = n-1$, there are $m$ scenarios, each with probability $\dfrac{1}{m}$, and one person is remaining to be <em>sauced</em>.</p>
