@@ -13134,19 +13134,19 @@ $$ = \frac{(k-i)}{k(k+1)}$$
 <br/>
 $$ = \frac{((k+1)-i-1)}{(k+1)-1} \textrm{ with probability of }your\textrm{ location being } \frac{1}{k+1}$$</p>
 <h5 id="Case-2-(Right-most):">Case 2 (Right most):<a class="anchor-link" href="#Case-2-(Right-most):">&#182;</a></h5><p><img src="II5.png" width="300" height="300"></p>
-<p>Similarly:</p>
+<p>In this case, because the next new recepient will beto the right of <em>you</em>, $i$ changes.  $i-1$ will be looked at for $m=k$ in order to achieve $i$ for $m=k+1$ in this case.</p>
 <p>(One of the $k$ locations for <em>you</em>) * (Left most of $sauced$ arc and next new recepient being right + Right most of $sauced$ arc and next new recepient being right)</p>
-$$ = \frac{1}{k} \cdot \bigg(\frac{k-i-1}{k-1} \cdot \frac{1}{k+1} + \frac{i}{k-1} \cdot \frac{k}{k+1}\bigg)$$<p>
+$$ = \frac{1}{k} \cdot \bigg(\frac{k-(i-1)-1}{k-1} \cdot \frac{1}{k+1} + \frac{(i-1)}{k-1} \cdot \frac{k}{k+1}\bigg)$$<p>
 <br/>
-$$ = \frac{1}{k} \cdot \bigg(\frac{ik+k-i-1}{(k-1)(k+1)}\bigg)$$
+$$ = \frac{1}{k} \cdot \bigg(\frac{(i-1)k+k-(i-1)-1}{(k-1)(k+1)}\bigg)$$
 <br/>
-$$ = \frac{(i+1)(k-1)}{(k-1)k(k+1)}$$
+$$ = \frac{i(k-1)}{(k-1)k(k+1)}$$
 <br/>
-$$ = \frac{(i+1)}{k(k+1)}$$
+$$ = \frac{i}{k(k+1)}$$
 <br/>
-$$ = \frac{(i+1)}{(k+1)-1} \textrm{ with probability of }your\textrm{ location being } \frac{1}{k+1}$$</p>
-<p>Note that $i+1$ represents one more individual to the right of <em>you</em>.</p>
-<p>Note that Case 1 and Case 2 hold when $i = k-1$ or $i = 0$, that is, the two exceptions where <em>you</em> are at the left most or right most end of the <em>sauced</em> arc.</p>
+$$ = \frac{i}{(k+1)-1} \textrm{ with probability of }your\textrm{ location being } \frac{1}{k+1}$$</p>
+<p>Note that when $i = k$, all other $sauced$ individuals are to <em>your</em> right and <strong>Case 1</strong> yields $0$ and <strong>Case 2</strong> yields $1$.</p>
+<p>Similarly, when $i = 0$, all other $sauced$ individuals are to <em>your</em> left and <strong>Case 1</strong> yields $1$ and <strong>Case 2</strong> yields $0$.</p>
 <p>If $m = n-1$, there are $m$ scenarios, each with probability $\dfrac{1}{m}$, and one person is remaining to be <em>sauced</em>.</p>
 <p>Therefore, for $n$ people, everyone besides you has an equal chance of $\dfrac{1}{n-1}$ to be the last to receive the cranberry sauce.</p>
 
