@@ -13082,15 +13082,15 @@ div#notebook {
 <p>Instead of passing the sauce around in a circle, you pass it randomly to the person seated directly to your left or to your right. They then do the same, passing it randomly either to the person to <em>their</em> left or right. This continues until everyone has, at some point, received the cranberry sauce.</p>
 <p>Of the 20 people in the circle, who has the greatest chance of being the <em>last</em> to receive the cranberry sauce?</p>
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Let us look at this problem in a more general form.  Assume $n$ people are sitting at a circular table.  At any point in this procedure, exactly $m$ people, $1 \leq m \leq n$ have been <em>sauced</em>, that is, have received the bowl of cranberry sauce, and $n-m$ are waiting.  A diagram below illustrates the <em>saucing</em>.</p>
-<p><img src="1.png" alt = "sauced" width="300" height="300"></p>
+<p><img src="1.png" width="300" height="300"></p>
 <p>Once $m$ people are <em>sauced</em>, the most recent individual <em>sauced</em> who is holding the bowl is either on the far left or far right of the arc of those who have been <em>sauced</em>.</p>
 <h3 id="Proof-I.">Proof I.<a class="anchor-link" href="#Proof-I.">&#182;</a></h3><p>The next new recepient is either the one immediately to the far left or far right of the arc.  The probabilities of them being the next new recepient will be shown to be as illustrated below.</p>
-<p><img src="I1.png" alt = "next saucing" width="300" height="300"></p>
+<p><img src="I1.png" width="300" height="300"></p>
 <h4 id="True-for-$m-=-1$.">True for $m = 1$.<a class="anchor-link" href="#True-for-$m-=-1$.">&#182;</a></h4><p><img src="I2.png" alt = "initial saucing" width="300" height="300"></p>
 <p>Notice in the beginning when you hold the cranberry sauce, the individuals immediately to your left and right have equal probabilities of being the next new recepient.
 $$\frac{m}{m+1} = \frac{1}{m+1} = \frac{1}{2}$$</p>
-<h4 id="Assume-$m-=-k$.">Assume $m = k$.<a class="anchor-link" href="#Assume-$m-=-k$.">&#182;</a></h4><p><img src="I3.png" alt = "assumed saucing" width="300" height="300"></p>
-<h4 id="For-$m-=-k-+-1$.">For $m = k + 1$.<a class="anchor-link" href="#For-$m-=-k-+-1$.">&#182;</a></h4><p><img src="I4.png" alt = "assumed saucing" width="400" height="400"></p>
+<h4 id="Assume-$m-=-k$.">Assume $m = k$.<a class="anchor-link" href="#Assume-$m-=-k$.">&#182;</a></h4><p><img src="I3.png" width="300" height="300"></p>
+<h4 id="For-$m-=-k-+-1$.">For $m = k + 1$.<a class="anchor-link" href="#For-$m-=-k-+-1$.">&#182;</a></h4><p><img src="I4.png" width="400" height="400"></p>
 <p>This diagram is achieved from $m=k$ where the cranberry sauce is passed left around the circle.</p>
 <p>The $k+1$ who have been <em>sauced</em> are labeled as two groups of $k$, differing only by their endpoints.  Note the dark green $k$ is the <em>sauced</em> group from $m=k$.</p>
 <p>From where the bowl is currently located, the probability of the individual to the left being the next new recepient is $\dfrac{k}{k+1}$, <em>as long as the sauce is passed within the light green</em>.  The probability of being passed to the rightmost individual in the dark green $k$ from the current bowl location is $\dfrac{1}{k+1}$.  From this rightmost position in the dark green $k$, getting back to the current bowl location is also $\dfrac{1}{k+1}$.  This repeats.</p>
@@ -13115,13 +13115,13 @@ $$= \frac{k+1}{k+2}$$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Proof-II.">Proof II.<a class="anchor-link" href="#Proof-II.">&#182;</a></h3><p>Note that from the initial description, there are $m$ possibilities for exactly $m$ individuals to have been sauced.  This is because <em>you</em> could be in any of the $m$ positions.  Each of these scenarios is equally likely with probability $\dfrac{1}{m}$.</p>
 <p>In addition, the cranberry sauce bowl could be with the most recent new recepient at either end of the $sauced$ arc.  The two exceptions are the two scenarios where <em>you</em> are at an end.  The probabilities of the location of the cranberry sauce depends on the location of where <em>you</em> are in the <em>sauced</em> arc.  $i$ represents the number of <em>sauced</em> individuals to the right of you. These probabilities will be shown to be as illustrated below.</p>
-<p><img src="II1.png" alt = "assumed saucing" width="1200" height="300"></p>
-<h4 id="True-for-$m-=-2$.">True for $m = 2$.<a class="anchor-link" href="#True-for-$m-=-2$.">&#182;</a></h4><p><img src="II2.png" alt = "assumed saucing" width="500" height="300"></p>
+<p><img src="II1.png" width="1200" height="300"></p>
+<h4 id="True-for-$m-=-2$.">True for $m = 2$.<a class="anchor-link" href="#True-for-$m-=-2$.">&#182;</a></h4><p><img src="II2.png" width="500"></p>
 <p>$2$ scenarios, each with probability $\dfrac{1}{2}$</p>
-<h4 id="Assume-$m-=-k$.">Assume $m = k$.<a class="anchor-link" href="#Assume-$m-=-k$.">&#182;</a></h4><p><img src="II3.png" alt = "assumed saucing" width="300" height="300"></p>
+<h4 id="Assume-$m-=-k$.">Assume $m = k$.<a class="anchor-link" href="#Assume-$m-=-k$.">&#182;</a></h4><p><img src="II3.png" width="300" height="300"></p>
 <p>$k$ scenarios, for $0 \leq i \leq k-1$, each equally likely with probability $\dfrac{1}{k}$.</p>
 <h4 id="For-m-=-$k-+-1$.">For m = $k + 1$.<a class="anchor-link" href="#For-m-=-$k-+-1$.">&#182;</a></h4><p>For a $sauced$ arc of $k+1$ individuals, we will look at the two possibilities of the bowl being at the left most and right most ends of the arc.</p>
-<h5 id="Case-1-(Left-most):">Case 1 (Left most):<a class="anchor-link" href="#Case-1-(Left-most):">&#182;</a></h5><p><img src="II4.png" alt = "assumed saucing" width="300" height="300"></p>
+<h5 id="Case-1-(Left-most):">Case 1 (Left most):<a class="anchor-link" href="#Case-1-(Left-most):">&#182;</a></h5><p><img src="II4.png" width="300" height="300"></p>
 <p>Using $m = k$ above and the probabilities from Proof I. for the next new recepient, the above illustration above can be achieved by:</p>
 <p>(One of the $k$ locations for <em>you</em>) * (Left most of $sauced$ arc and next new recepient being left + Right most of $sauced$ arc and next new recepient being left)</p>
 $$ = \frac{1}{k} \cdot \bigg(\frac{k-i-1}{k-1} \cdot \frac{k}{k+1} + \frac{i}{k-1} \cdot \frac{1}{k+1}\bigg)$$<p>
@@ -13133,7 +13133,7 @@ $$ = \frac{(k-i)(k-1)}{(k-1)k(k+1)}$$
 $$ = \frac{(k-i)}{k(k+1)}$$
 <br/>
 $$ = \frac{((k+1)-i-1)}{(k+1)-1} \textrm{ with probability of }your\textrm{ location being } \frac{1}{k+1}$$</p>
-<h5 id="Case-2-(Right-most):">Case 2 (Right most):<a class="anchor-link" href="#Case-2-(Right-most):">&#182;</a></h5><p><img src="II5.png" alt = "assumed saucing" width="300" height="300"></p>
+<h5 id="Case-2-(Right-most):">Case 2 (Right most):<a class="anchor-link" href="#Case-2-(Right-most):">&#182;</a></h5><p><img src="II5.png" width="300" height="300"></p>
 <p>Similarly:</p>
 <p>(One of the $k$ locations for <em>you</em>) * (Left most of $sauced$ arc and next new recepient being right + Right most of $sauced$ arc and next new recepient being right)</p>
 $$ = \frac{1}{k} \cdot \bigg(\frac{k-i-1}{k-1} \cdot \frac{1}{k+1} + \frac{i}{k-1} \cdot \frac{k}{k+1}\bigg)$$<p>
