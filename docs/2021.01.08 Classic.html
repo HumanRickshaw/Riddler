@@ -14265,19 +14265,19 @@ a.anchor-link {
 <p><em>Extra credit</em>: Marian now uses a target with 10 concentric circles, whose radii are 1, 2, 3, etc., all the way up to 10 — the radius of the entire target. This time, Robin must fire as many arrows as she can, such that each arrow falls within a smaller concentric circle than the previous arrow. On average, what score can Robin expect to achieve in <em>this</em> version of the archery challenge?</p>
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Let $R$ be the radius of the target.</p>
 <p>The probability density function of an arrow can be expressed as:</p>
-$$f(r) = \dfrac{2\pi r}{\pi R^2}$$<p>An arrow landing in the target is expressed as,</p>
-$$Pr\left[0 \leq X \le R \right] = \int_{0}^{R} \left( \dfrac{2\pi r}{\pi R^2} \right) dr$$<p><br />
+$$f(r) = \dfrac{2\pi r}{\pi R^2} = \dfrac{2r}{R^2}$$<p>An arrow landing in the target is expressed as,</p>
+$$Pr\left[0 \leq X \le R \right] = \int_{0}^{R} \left( \dfrac{2r}{R^2} \right) dr$$<p><br />
 $$= \dfrac{1}{R^2} \cdot {r_1^2} \big|_{0}^{R}$$
 <br />
 $$ = 1$$</p>
-<p>In order to get a score of $n$, every arrow must be within the previous arrow's radius, but the $n^{th}$ arrow must be outside the $n-1^{st}$ arrow.</p>
+<p>In order to get a score of $n$, every arrow must be within the previous arrow's radius, but the $n^{th}$ arrow must be outside the $(n-1)^{st}$ arrow.</p>
 <p>Induction will be used to show the probability of score $n$ can be expressed as:</p>
 $$P(n) = \left( \dfrac{1}{R^2} \right)^n \cdot \int_{0}^{R} \left( R^2 \frac{(2n-2)r^{2n-3}}{(n-1)!} - \frac{(2n)r^{2n-1}}{n!} \right)dr$$<p><br />
 $$ = \dfrac{1}{R^{2n}} \cdot \left( R^2 \frac{r^{2n-2}}{(n-1)!} - \frac{r^{2n}}{n!} \right) \bigg|_{0}^{R}$$
 <br />
 $$ = \dfrac{1}{(n-1)!} - \dfrac{1}{n!}$$.</p>
 <h3 id="For-a-score-of-$2$:">For a score of $2$:<a class="anchor-link" href="#For-a-score-of-$2$:">&#182;</a></h3><p>To have a score of 2, the second arrow must be outside the radius of the first arrow.</p>
-$$\int_{0}^{R} \left( \dfrac{2\pi r_1}{\pi R^2} \right) \cdot \left(\int_{r_1}^{R} \left( \dfrac{2\pi r_2}{\pi R^2} \right)  dr_2 \right) dr_1$$<p><br />
+$$\int_{0}^{R} \left( \dfrac{2r_1}{R^2} \right) \cdot \left(\int_{r_1}^{R} \left( \dfrac{2r_2}{R^2} \right)  dr_2 \right) dr_1$$<p><br />
 $$= \left(\dfrac{1}{R^2}\right)^2 \cdot \int_{0}^{R} 2r_1 \cdot \left( {r_2^2} \big|_{r_1}^{R} \right) dr_1$$
 <br />
 $$= \dfrac{1}{R^4} \cdot \int_{0}^{R} 2r_1 \cdot \left(R^2 - r_1^2 \right) dr_1$$
@@ -14298,7 +14298,7 @@ $$ = \dfrac{1}{(k-1)!} - \dfrac{1}{k!}$$</p>
 <h3 id="For-score-$k-+-1$:">For score $k + 1$:<a class="anchor-link" href="#For-score-$k-+-1$:">&#182;</a></h3><p>The upper limit $r_1$ is substituted for $R$ in the previous evaluation.</p>
 <p><br />
 <br />
-$$\int_{0}^{R} \left( \dfrac{2\pi r_1}{\pi R^2} \right) \cdot \left(\left( \dfrac{1}{R^2} \right)^k \int_{0}^{r_1} \left(R^2 \frac{(2k-2)r^{2k-3}}{(k-1)!} - \frac{(2k)r^{2k-1}}{k!} \right)dr \right) dr_1$$
+$$\int_{0}^{R} \left( \dfrac{2r_1}{R^2} \right) \cdot \left(\left( \dfrac{1}{R^2} \right)^k \int_{0}^{r_1} \left(R^2 \frac{(2k-2)r^{2k-3}}{(k-1)!} - \frac{(2k)r^{2k-1}}{k!} \right)dr \right) dr_1$$
 <br />
 $$= \left( \dfrac{1}{R^2} \right)^{k+1}  \cdot \int_{0}^{R} 2r_1 \cdot \left( \left( R^2 \frac{r^{2k-2}}{(k-1)!} - \frac{r^{2k}}{k!} \right) \bigg|_{0}^{r_1} \right) dr_1$$
 <br />
