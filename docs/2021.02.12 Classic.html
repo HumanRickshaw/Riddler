@@ -14276,7 +14276,48 @@ a.anchor-link {
 <p>On the right, notice that three segments can intersect three other segments with two pairs of endpoints.  That is, each <b style = "color: #453781;">purple</b> segment intersects exactly three <b style = "color: #29AF7F;">cyan</b> segments, and each <b style = "color: #29AF7F;">cyan</b> segment intersects exactly three <b style = "color: #453781;">purple</b> segments.</p>
 <h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>Combining these ideas together yields a polygon of 18 sides, where each side intersects exactly <em>three</em> other sides.</p>
 <p><img src = "2021.02.12 Classic2.png"></p>
-<h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.02.13">2021.02.13<a class="anchor-link" href="#2021.02.13">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.02.12%20Classic%20Code.html">here</a>.</p>
+<h2 id="General-Pattern?">General Pattern?<a class="anchor-link" href="#General-Pattern?">&#182;</a></h2><p>The minimum number of sides a polygon can have such that each side intersects exactly $n$ other sides is $n+3$ for even $n$.</p>
+<p>This can be easily determined by the following.</p>
+<ul>
+    <li>A side is determined by two vertices.</li>
+    <li>Since each vertex is defined by two sides, place $\frac{n}{2}$ vertices on one region bounded by the side.  This yields $n$ total sides intersecting the specified side.</li>
+    <li>Place $\frac{n}{2} +1$ vertices on the opposite region bounded by the side.  Note that if there are only $\frac{n}{2}$ vertices on the opposite region bounded by the side</li>
+</ul><p>For odd $n$ I could not determine a pattern.  But I did determine that for $n = 5$, the solution is a decagon, much less than that of $n = 3$.</p>
+<p><img src = "2021.02.12 Classic3.png"></p>
+<p>Notice that each pair of sides of the same color intersect each other and exactly two other pairs.</p>
+<table style = "width: 300px">
+    <tr>
+        <th style = "text-align: center">Number of Intersections for each side</th>
+        <th style = "text-align: center">Minimum number of sides</th>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$1$</td>
+        <td style = "text-align: center">$6$</td>  
+    </tr>
+    <tr>
+        <td style = "text-align: center">$2$</td>
+        <td style = "text-align: center">$5$</td>  
+    </tr>    <tr>
+        <td style = "text-align: center">$3$</td>
+        <td style = "text-align: center">$18$</td>  
+    </tr>
+        <tr>
+        <td style = "text-align: center">$4$</td>
+        <td style = "text-align: center">$7$</td>  
+    </tr>
+        <tr>
+        <td style = "text-align: center">$5$</td>
+        <td style = "text-align: center">$10$</td>  
+    </tr>
+        <tr>
+        <td style = "text-align: center">$6$</td>
+        <td style = "text-align: center">$9$</td>  
+    </tr>
+        <tr>
+        <td style = "text-align: center">$7$</td>
+        <td style = "text-align: center">$??$</td>  
+    </tr>
+</table><h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.02.13">2021.02.13<a class="anchor-link" href="#2021.02.13">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.02.12%20Classic%20Code.html">here</a>.</p>
 
 </div>
 </div>
