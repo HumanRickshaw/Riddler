@@ -14281,7 +14281,7 @@ a.anchor-link {
 <ul>
     <li>A side is determined by two vertices.</li>
     <li>Since each vertex is defined by two sides, place $\frac{n}{2}$ vertices on one region bounded by the side.  This yields $n$ total sides intersecting the specified side.</li>
-    <li>Place $\frac{n}{2} +1$ vertices on the opposite region bounded by the side.  Note that if there are only $\frac{n}{2}$ vertices on the opposite region bounded by the side</li>
+    <li>Place $\frac{n}{2} +1$ vertices on the opposite region bounded by the side.  Note that if there are only $\frac{n}{2}$ vertices on the opposite region bounded by the side, there will be an even number of vertices and sides, which will not result in the desired polygon.</li>
 </ul><p>$2 + \frac{n}{2} +\frac{n}{2} +1 = n+3$</p>
 <p>For odd $n$ I could not see a pattern.  But I did determine that for $n = 5$, the solution is a decagon, much less than that of $n = 3$.</p>
 <p><img src = "2021.02.12 Classic3.png"></p>
@@ -14317,6 +14317,14 @@ a.anchor-link {
         <tr>
         <td style = "text-align: center">$7$</td>
         <td style = "text-align: center">$??$</td>  
+    </tr>
+    <tr>
+        <td style = "text-align: center">$8$</td>
+        <td style = "text-align: center">$11$</td>  
+    </tr>
+    <tr>
+        <td style = "text-align: center">$...$</td>
+        <td style = "text-align: center">$...$</td>  
     </tr>
 </table><h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.02.13">2021.02.13<a class="anchor-link" href="#2021.02.13">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.02.12%20Classic%20Code.html">here</a>.</p>
 
