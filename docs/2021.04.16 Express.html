@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>2021.04.09 Classic</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2021.04.16 Express</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,64 +14259,81 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Can-You-Crack-The-Case-Of-The-Crescent-Moon?">Can You Crack The Case Of The Crescent Moon?<a class="anchor-link" href="#Can-You-Crack-The-Case-Of-The-Crescent-Moon?">&#182;</a></h1><h2 id="Riddler-Classic"><a href="https://fivethirtyeight.com/features/can-you-crack-the-case-of-the-crescent-moon/">Riddler Classic</a><a class="anchor-link" href="#Riddler-Classic">&#182;</a></h2><p>This past Monday marked the beginning of <a href="https://www.newsweek.com/ramadan-2021-calendar-fasting-prayer-times-1583194">Ramadan</a> in the U.S. The month-long observance traditionally begins with the <a href="https://inews.co.uk/news/world/ramadan-moon-sighting-2021-saudi-arabia-when-date-start-meaning-950329">sighting of a crescent moon</a>, or hilal, after a new moon. For this week’s Classic, let’s take a closer look at a waxing crescent moon.</p>
-<p>After a new moon, the crescent appears to grow slowly at first. At some point, the moon will be one-sixth full by area, then one-quarter full, and so on. Eventually, it becomes a half-moon, at which point its growth begins to slow down. The animation below provides some insight into what’s happening here:</p>
-<p><img src = "2021.04.16 Classic0.gif" width = 600></p>
-<p>How many times faster is the area of the illuminated moon growing when it is a half-moon versus a one-sixth moon?</p>
-<p>(Some simplifying assumptions you might make for this problem are that the moon is a perfect sphere, that its orbit around Earth is a perfect circle, that the moon orbits the Earth much faster than the Earth orbits the sun and that the sun is very, very far away. If you make additional assumptions, feel free to include them in your response.)</p>
+<h1 id="Can-You-Maximize-The-Pixmit-Deck?">Can You Maximize The Pixmit Deck?<a class="anchor-link" href="#Can-You-Maximize-The-Pixmit-Deck?">&#182;</a></h1><h2 id="Riddler-Express"><a href="https://fivethirtyeight.com/features/can-you-crack-the-case-of-the-crescent-moon/">Riddler Express</a><a class="anchor-link" href="#Riddler-Express">&#182;</a></h2><p>From Curtis Karnow comes a puzzle that boldly goes where no human has gone before:</p>
+<p>You are creating a variation of a Romulan <a href="https://memory-alpha.fandom.com/wiki/Pixmit">pixmit</a> deck. Each card is an equilateral triangle, with one of the digits 0 through 9 (written in Romulan, of course) at the base of each side of the card. No number appears more than once on each card. Furthermore, every card in the deck is unique, meaning no card can be rotated so that it matches (i.e., can be superimposed on) any other card.</p>
+<p>What is the greatest number of cards your pixmit deck can have?</p>
+<p><i>Extra credit:</i> Suppose you allow numbers to appear two or three times on a given card. Once again, no card can be rotated so that it matches any other card. Now what is the greatest number of cards your pixmit deck can have?</p>
+<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Three numbers in a row can be calculated by applying $n(n-1)(n-2)$ for $n$ numbers/symbols to be used.  Dividing by three accounts for the three different rotational orientations of an equilateral triangle.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>The assumption I am making is that the boundary of illumination/shadow across the surface of the moon rotates as a circle through the poles at a constant rate.</p>
-<p>The illuminated area of the moon is a semicircle plus (or minus) the area of a semi ellipse.  The diagram below illustrates the view from the front and bottom.</p>
-<p><img src = "2021.04.16 Classic1.png"></p>
-<p>The triangle from the bottom view yields $x = r \cos \theta$.</p>
-<p>Since the illuminated area can be calculated as a semicircle $±$ semi ellipse,</p>
-$$A = \frac{\pi r^2}{2} - \frac{\pi r^2\cos \theta}{2}$$<p><br>
-$$= \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$
-<br></p>
-<p>The rate of change of area can be calculated as,</p>
-$$\frac{dA}{dt} = \frac{\pi r^2}{2} \left(\sin \theta\right)\frac{d \theta}{dt} = k \left(\sin \theta\right)$$
+<h2 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit">&#182;</a></h2><p>Allowing numbers to appear two times on a card means that if that occurs, the card has exactly two numbers.  This can occur $n \cdot (n-1)$ ways, as any number can appear twice, and any other number can appear once.</p>
+<p>Allowing numbers to appear three times on a card means that if that occurs, the card has exactly one number.  This can occur $n$ ways, as any number can be the number that appears 3 times.</p>
+<p>The following table summarizes the results:</p>
+<table style = "width: 500px ">
+    <tr>
+        <th style = "text-align: center"># of Numbers/Symbols on Cards</th>
+        <th style = "text-align: center">Numbers Appear Exactly Once</th>
+        <th style = "text-align: center">One Number Appears Exactly Twice</th> 
+        <th style = "text-align: center">One Number Appears Exactly Thrice</th>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$0$</td>
+        <td style = "text-align: center">$0$</td>
+        <td style = "text-align: center">$0$</td>  
+        <td style = "text-align: center">$0$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$1$</td>
+        <td style = "text-align: center">$0$</td>
+        <td style = "text-align: center">$0$</td>  
+        <td style = "text-align: center">$1$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$2$</td>
+        <td style = "text-align: center">$0$</td>
+        <td style = "text-align: center">$2$</td>  
+        <td style = "text-align: center">$2$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$3$</td>
+        <td style = "text-align: center">$2$</td>
+        <td style = "text-align: center">$6$</td>  
+        <td style = "text-align: center">$3$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$...$</td>
+        <td style = "text-align: center">$...$</td>
+        <td style = "text-align: center">$...$</td>  
+        <td style = "text-align: center">$...$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$n$</td>
+        <td style = "text-align: center">$\dfrac{n(n-1)(n-2)}{3}$</td>
+        <td style = "text-align: center">$n(n-1)$</td>  
+        <td style = "text-align: center">$n$</td>
+    </tr>
+</table>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Half-Moon">Half-Moon<a class="anchor-link" href="#Half-Moon">&#182;</a></h3>$$A_{\frac{1}{2}} = \frac{\pi r^2}{2} = \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$<p><br>
-$$0 = \cos \theta$$
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>Substituting $n = 10$ yields $\dfrac{10 \cdot 9 \cdot 8}{3} = 240$ unique cards.</p>
+<p>Allowing repeats,
 <br>
-$$\theta = \frac{\pi}{2}$$
+$$\dfrac{n(n-1)(n-2)}{3} + n(n-1) + n$$
 <br>
-It follows that $$\frac{dA_{\frac{1}{2}}}{dt} = k \left(\sin \frac{\pi}{2} \right) = k$$</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="One-Sixth-Moon">One-Sixth Moon<a class="anchor-link" href="#One-Sixth-Moon">&#182;</a></h3>$$A_{\frac{1}{6}} = \frac{\pi r^2}{6} = \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$<p><br>
-$$\frac{1}{3} = \left(1 - \cos \theta\right)$$
+$$= \dfrac{n(n-1)(n-2)}{3} + \dfrac{3n(n-1)}{3} + \dfrac{3n}{3}$$
 <br>
-$$\cos \theta = \frac{2}{3}$$
+$$= \dfrac{n(n-1)(n-2+3)}{3} + \dfrac{3n}{3}$$
 <br>
-Applying $\cos^2 \theta + \sin^2 \theta = 1$ yields $\sin \theta = \frac{\sqrt{5}}{3}$.
+$$= \dfrac{n(n^2-1+3)}{3}$$
 <br>
-<br>
-It follows that
-$$\frac{dA_{\frac{1}{6}}}{dt} = \frac{k\sqrt{5}}{3}$$</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2>$$\frac{\frac{dA_{\frac{1}{2}}}{dt}}{\frac{dA_{\frac{1}{6}}}{dt}} = \frac{k}{\frac{k\sqrt{5}}{3}}= \frac{3}{\sqrt{5}} \approx 1.342$$<p>The half moon illuminated area is increasing approximately $1.342$ times faster than that of the one-sixth moon.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.04.19">2021.04.19<a class="anchor-link" href="#2021.04.19">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.04.16%20Classic%20Code.html">here</a>.</p>
-
+$$= \dfrac{n^3+2n}{3}$$</p>
+<p>Substituting $n = 10$ yields $\dfrac{1020}{3} = 340$ unique cards, allowing repeatable numbers.</p>
+<h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.04.18">2021.04.18<a class="anchor-link" href="#2021.04.18">&#182;</a></h4>
 </div>
 </div>
 </body>
