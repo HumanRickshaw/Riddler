@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>2021.04.09 Classic Code</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2021.04.09 Classic</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,148 +14259,64 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Will double a list of block configurations by appending East to each entry and West to each entry.</span>
-<span class="k">def</span> <span class="nf">append_EW</span><span class="p">(</span><span class="n">traffics</span><span class="p">):</span>
-    <span class="n">new_traffics</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">traffic</span> <span class="ow">in</span> <span class="n">traffics</span><span class="p">:</span>
-        <span class="n">new_traffics</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">traffic</span> <span class="o">+</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
-        <span class="n">new_traffics</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">traffic</span> <span class="o">+</span> <span class="s1">&#39;W&#39;</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">new_traffics</span><span class="p">)</span>
-
-<span class="c1">#Will double a list of block configurations by appending North to each entry and South to each entry.</span>
-<span class="k">def</span> <span class="nf">append_NS</span><span class="p">(</span><span class="n">traffics</span><span class="p">):</span>
-    <span class="n">new_traffics</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">traffic</span> <span class="ow">in</span> <span class="n">traffics</span><span class="p">:</span>
-        <span class="n">new_traffics</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">traffic</span> <span class="o">+</span> <span class="s1">&#39;N&#39;</span><span class="p">)</span>
-        <span class="n">new_traffics</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">traffic</span> <span class="o">+</span> <span class="s1">&#39;S&#39;</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">new_traffics</span><span class="p">)</span>
-
-<span class="c1">#Add 3 vertical blocks,</span>
-<span class="c1">#Add 2 horizontal blocks.</span>
-<span class="k">def</span> <span class="nf">create_all_traffics</span><span class="p">(</span><span class="n">traffics</span><span class="p">):</span>
-    <span class="n">traffics</span> <span class="o">=</span> <span class="n">append_NS</span><span class="p">(</span><span class="n">append_NS</span><span class="p">(</span><span class="n">append_NS</span><span class="p">(</span><span class="n">traffics</span><span class="p">)))</span>
-    <span class="n">traffics</span> <span class="o">=</span> <span class="n">append_EW</span><span class="p">(</span><span class="n">append_EW</span><span class="p">(</span><span class="n">traffics</span><span class="p">))</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">traffics</span><span class="p">)</span>
-
-<span class="c1">#Starting with 2 horizontal blocks,</span>
-<span class="c1">#Add 3 vertical blocks,</span>
-<span class="c1">#Add 2 horizontal blocks,</span>
-<span class="c1">#Add 3 vertical blocks,</span>
-<span class="c1">#Add 2 horizontal blocks.</span>
-<span class="n">routes</span> <span class="o">=</span> <span class="n">create_all_traffics</span><span class="p">(</span><span class="n">create_all_traffics</span><span class="p">(</span><span class="n">append_EW</span><span class="p">([</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="s1">&#39;W&#39;</span><span class="p">])))</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">routes</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>4096</pre>
-</div>
+<h1 id="Can-You-Crack-The-Case-Of-The-Crescent-Moon?">Can You Crack The Case Of The Crescent Moon?<a class="anchor-link" href="#Can-You-Crack-The-Case-Of-The-Crescent-Moon?">&#182;</a></h1><h2 id="Riddler-Classic"><a href="https://fivethirtyeight.com/features/can-you-crack-the-case-of-the-crescent-moon/">Riddler Classic</a><a class="anchor-link" href="#Riddler-Classic">&#182;</a></h2><p>This past Monday marked the beginning of <a href="https://www.newsweek.com/ramadan-2021-calendar-fasting-prayer-times-1583194">Ramadan</a> in the U.S. The month-long observance traditionally begins with the <a href="https://inews.co.uk/news/world/ramadan-moon-sighting-2021-saudi-arabia-when-date-start-meaning-950329">sighting of a crescent moon</a>, or hilal, after a new moon. For this week’s Classic, let’s take a closer look at a waxing crescent moon.</p>
+<p>After a new moon, the crescent appears to grow slowly at first. At some point, the moon will be one-sixth full by area, then one-quarter full, and so on. Eventually, it becomes a half-moon, at which point its growth begins to slow down. The animation below provides some insight into what’s happening here:</p>
+<p><img src = "2021.04.16 Classic0.gif" width = 600></p>
+<p>How many times faster is the area of the illuminated moon growing when it is a half-moon versus a one-sixth moon?</p>
+<p>(Some simplifying assumptions you might make for this problem are that the moon is a perfect sphere, that its orbit around Earth is a perfect circle, that the moon orbits the Earth much faster than the Earth orbits the sun and that the sun is very, very far away. If you make additional assumptions, feel free to include them in your response.)</p>
 
 </div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">routes</span> <span class="p">:</span>
-    <span class="c1">#Routes of Length 4.</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    
-    <span class="c1">#Routes of Length 6.</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;N&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;E&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;N&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;W&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;W&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span> 
-    
-    <span class="c1">#Routes of Length 8.</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;N&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;N&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span> 
-    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span> <span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;W&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;W&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;S&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;E&#39;</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span> 
-    
-
-<span class="n">count</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>1135</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h5 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h5><h4 id="2021.04.12">2021.04.12<a class="anchor-link" href="#2021.04.12">&#182;</a></h4>
+<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>The assumption I am making is that the boundary of illumination/shadow across the surface of the moon rotates as a circle through the poles at a constant rate.</p>
+<p>The illuminated area of the moon is a semicircle plus (or minus) the area of a semi ellipse.  The diagram below illustrates the view from the front and bottom.</p>
+<p><img src = "2021.04.16 Classic1.png"></p>
+<p>The triangle from the bottom view yields $x = r \cos \theta$.</p>
+<p>Since the illuminated area can be calculated as a semicircle $±$ semi ellipse,</p>
+$$A = \frac{\pi r^2}{2} - \frac{\pi r^2\cos \theta}{2}$$<p><br>
+$$= \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$
+<br></p>
+<p>The rate of change of area can be calculated as,</p>
+$$\frac{dA}{dt} = \frac{\pi r^2}{2} \left(\sin \theta\right)\frac{d \theta}{dt} = k \left(\sin \theta\right)$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Half-Moon">Half-Moon<a class="anchor-link" href="#Half-Moon">&#182;</a></h3>$$A_{\frac{1}{2}} = \frac{\pi r^2}{2} = \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$<p><br>
+$$0 = \cos \theta$$
+<br>
+$$\theta = \frac{\pi}{2}$$
+<br>
+It follows that $$\frac{dA_{\frac{1}{2}}}{dt} = k \left(\sin \frac{\pi}{2} \right) = k$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="One-Sixth-Moon">One-Sixth Moon<a class="anchor-link" href="#One-Sixth-Moon">&#182;</a></h3>$$A_{\frac{1}{6}} = \frac{\pi r^2}{6} = \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$<p><br>
+$$\frac{1}{3} = \left(1 - \cos \theta\right)$$
+<br>
+$$\cos \theta = \frac{2}{3}$$
+<br>
+Applying $\cos^2 \theta + \sin^2 \theta = 1$ yields $\sin \theta = \frac{\sqrt{5}}{3}$.
+<br>
+<br>
+It follows that
+$$\frac{dA_{\frac{1}{6}}}{dt} = \frac{k\sqrt{5}}{3}$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2>$$\frac{\frac{dA_{\frac{1}{2}}}{dt}}{\frac{dA_{\frac{1}{6}}}{dt}} = \frac{k}{\frac{k\sqrt{5}}{3}}= \frac{3}{\sqrt{5}} \approx 1.342$$<p>The half moon illuminated area is increasing approximately $1.342$ times faster than that of the one-sixth moon.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.04.19">2021.04.19<a class="anchor-link" href="#2021.04.19">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.04.16%20Classic%20Code.html">here</a>.</p>
+
 </div>
 </div>
 </body>

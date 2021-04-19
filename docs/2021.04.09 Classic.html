@@ -14259,63 +14259,42 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Can-You-Crack-The-Case-Of-The-Crescent-Moon?">Can You Crack The Case Of The Crescent Moon?<a class="anchor-link" href="#Can-You-Crack-The-Case-Of-The-Crescent-Moon?">&#182;</a></h1><h2 id="Riddler-Classic"><a href="https://fivethirtyeight.com/features/can-you-crack-the-case-of-the-crescent-moon/">Riddler Classic</a><a class="anchor-link" href="#Riddler-Classic">&#182;</a></h2><p>This past Monday marked the beginning of <a href="https://www.newsweek.com/ramadan-2021-calendar-fasting-prayer-times-1583194">Ramadan</a> in the U.S. The month-long observance traditionally begins with the <a href="https://inews.co.uk/news/world/ramadan-moon-sighting-2021-saudi-arabia-when-date-start-meaning-950329">sighting of a crescent moon</a>, or hilal, after a new moon. For this week’s Classic, let’s take a closer look at a waxing crescent moon.</p>
-<p>After a new moon, the crescent appears to grow slowly at first. At some point, the moon will be one-sixth full by area, then one-quarter full, and so on. Eventually, it becomes a half-moon, at which point its growth begins to slow down. The animation below provides some insight into what’s happening here:</p>
-<p><img src = "2021.04.16 Classic0.gif" width = 600></p>
-<p>How many times faster is the area of the illuminated moon growing when it is a half-moon versus a one-sixth moon?</p>
-<p>(Some simplifying assumptions you might make for this problem are that the moon is a perfect sphere, that its orbit around Earth is a perfect circle, that the moon orbits the Earth much faster than the Earth orbits the sun and that the sun is very, very far away. If you make additional assumptions, feel free to include them in your response.)</p>
+<h1 id="Can-You-Navigate-the-One-Way-Streets?">Can You Navigate the One-Way Streets?<a class="anchor-link" href="#Can-You-Navigate-the-One-Way-Streets?">&#182;</a></h1><h2 id="Riddler-Classic"><a href="https://fivethirtyeight.com/features/can-you-navigate-the-one-way-streets/">Riddler Classic</a><a class="anchor-link" href="#Riddler-Classic">&#182;</a></h2><p>From Graydon Snider comes a one-way trip to a tangle of grids:</p>
+<p>In Riddler City, all the streets are currently two-way streets. But in an effort to make the metropolis friendlier for pedestrians and cyclists, the mayor has decreed that all streets should be one-way. Meanwhile, the civil engineer overseeing this transition is not particularly invested in the project and will be randomly assigning every block of each street a random direction.</p>
+<p>For your daily commute to work, you drive a car two blocks east and two blocks south, as shown in the diagram below. What is the probability that, after each block is randomly assigned a one-way direction, there will still be a way for you to commute to work while staying within this two-by-two block region (i.e., sticking to the 12 streets you see in the diagram)? Here is one such arrangement of one-way streets that lets you commute to work:</p>
+<p><img src = "2021.04.09 Classic0.png"></p>
+<p>And no, you can’t get out of your car to hop on a bike or walk. I mean, you <i>can</i>, but not in this puzzle.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>The assumption I am making is that the boundary of illumination/shadow across the surface of the moon rotates as a circle through the poles at a constant rate.</p>
-<p>The illuminated area of the moon is a semicircle plus (or minus) the area of a semi ellipse.  The diagram below illustrates the view from the front and bottom.</p>
-<p><img src = "2021.04.16 Classic1.png"></p>
-<p>The triangle from the bottom view yields $x = r \cos \theta$.</p>
-<p>Since the illuminated area can be calculated as a semicircle $±$ semi ellipse,</p>
-$$A = \frac{\pi r^2}{2} - \frac{\pi r^2\cos \theta}{2}$$<p><br>
-$$= \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$
+<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>There are $2^{12} = 4,096$ total block configurations.</p>
+<p>There are $3$ categories and $14$ subcategories of block configurations that lead to work.
 <br></p>
-<p>The rate of change of area can be calculated as,</p>
-$$\frac{dA}{dt} = \frac{\pi r^2}{2} \left(\sin \theta\right)\frac{d \theta}{dt} = k \left(\sin \theta\right)$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Half-Moon">Half-Moon<a class="anchor-link" href="#Half-Moon">&#182;</a></h3>$$A_{\frac{1}{2}} = \frac{\pi r^2}{2} = \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$<p><br>
-$$0 = \cos \theta$$
-<br>
-$$\theta = \frac{\pi}{2}$$
-<br>
-It follows that $$\frac{dA_{\frac{1}{2}}}{dt} = k \left(\sin \frac{\pi}{2} \right) = k$$</p>
+<h3 id="Routes-of-length-$=-4$">Routes of length $= 4$<a class="anchor-link" href="#Routes-of-length-$=-4$">&#182;</a></h3><p><img src = "2021.04.09 Classic1.png" height = 55>
+<br></p>
+<h3 id="Routes-of-length-$=-6$">Routes of length $= 6$<a class="anchor-link" href="#Routes-of-length-$=-6$">&#182;</a></h3><p><img src = "2021.04.09 Classic2.png" height = 55>
+<br></p>
+<h3 id="Routes-of-length-$=-8$">Routes of length $= 8$<a class="anchor-link" href="#Routes-of-length-$=-8$">&#182;</a></h3><p><img src = "2021.04.09 Classic3.png" height = 55></p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="One-Sixth-Moon">One-Sixth Moon<a class="anchor-link" href="#One-Sixth-Moon">&#182;</a></h3>$$A_{\frac{1}{6}} = \frac{\pi r^2}{6} = \frac{\pi r^2}{2} \left(1 - \cos \theta\right)$$<p><br>
-$$\frac{1}{3} = \left(1 - \cos \theta\right)$$
-<br>
-$$\cos \theta = \frac{2}{3}$$
-<br>
-Applying $\cos^2 \theta + \sin^2 \theta = 1$ yields $\sin \theta = \frac{\sqrt{5}}{3}$.
-<br>
-<br>
-It follows that
-$$\frac{dA_{\frac{1}{6}}}{dt} = \frac{k\sqrt{5}}{3}$$</p>
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>While it easy to count the total number for each subcatgory, counting all block configurations becomes difficult with overlapping block configurations.  Using code, I arrived at</p>
+$$\dfrac{1135}{4096} \approx 27.71\%$$<h2 id="General-Solution">General Solution<a class="anchor-link" href="#General-Solution">&#182;</a></h2><p>I briefly explored a one-by-one block region and a one-by-two block region as well.  The probability of arriving at any location, starting from the top left, using the same random assignment of block directions, is shown below.</p>
+<h3 id="1x1">1x1<a class="anchor-link" href="#1x1">&#182;</a></h3><p><img src = "2021.04.09 Classic4.png">
+<br></p>
+<h3 id="1x2">1x2<a class="anchor-link" href="#1x2">&#182;</a></h3><p><img src = "2021.04.09 Classic5.png">
+<br></p>
+<p>No clear pattern emerges, and I am more confused. :(</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2>$$\frac{\frac{dA_{\frac{1}{2}}}{dt}}{\frac{dA_{\frac{1}{6}}}{dt}} = \frac{k}{\frac{k\sqrt{5}}{3}}= \frac{3}{\sqrt{5}} \approx 1.342$$<p>The half moon illuminated area is increasing approximately $1.342$ times faster than that of the one-sixth moon.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.04.19">2021.04.19<a class="anchor-link" href="#2021.04.19">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.04.16%20Classic%20Code.html">here</a>.</p>
+<h5 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h5><h4 id="2021.04.12">2021.04.12<a class="anchor-link" href="#2021.04.12">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.04.09%20Classic%20Code.html">here</a>.</p>
 
 </div>
 </div>
