@@ -14323,12 +14323,13 @@ $$ = \dfrac{k \cdot (n-k)}{2}$$</p>
 <p>The expected value added to the sum $p$ for the next flipped card is $\dfrac{q - p}{n-k}$.</p>
 <p>Therefore, if the sum of the remaining cards is greater than the flipped cards, one should continue playing.</p>
 <p>And likewise, if the sum of the cards flipped up is greater than or equal to the sum of the cards remaining, one should stop playing!</p>
-<h2 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit">&#182;</a></h2><p>My equation above is a <i>lower limit</i>. However, I did calculate some smaller deck values.</p>
-<table style = "width: 600px ">
+<h2 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit">&#182;</a></h2><p>My equation for expected value is a <i>lower limit</i>. However, I did calculate some smaller deck values.</p>
+<p><b>(Update 2021.06.29...I created an algorithm and achieved answers for n = 7, 8, 9, 10, 11)</b></p>
+<table style = "width: 700px ">
     <tr>
         <th style = "text-align: center">Deck Size</th>
         <th style = "text-align: center">$k$</th>
-        <th style = "text-align: center">Lower Limit - $\dfrac{k \cdot (n-k)}{2}$</th>
+        <th style = "text-align: center">Lower Limit : $\dfrac{k \cdot (n-k)}{2}$</th>
         <th style = "text-align: center">Maximum Expected Value</th> 
     </tr>
     <tr>
@@ -14361,13 +14362,44 @@ $$ = \dfrac{k \cdot (n-k)}{2}$$</p>
         <td style = "text-align: center">$4.5$</td>
         <td style = "text-align: center">$\dfrac{3336}{720} \approx 4.63$</td>
     </tr>
+    <tr>
+        <td style = "text-align: center">$7$</td>
+        <td style = "text-align: center">$3$ or $4$</td>
+        <td style = "text-align: center">$6$</td>
+        <td style = "text-align: center">$\dfrac{31704}{5040} \approx 6.29$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$8$</td>
+        <td style = "text-align: center">$4$</td>
+        <td style = "text-align: center">$8$</td>
+        <td style = "text-align: center">$\dfrac{330624}{40320} \approx 8.2$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$9$</td>
+        <td style = "text-align: center">$4$ or $5$</td>
+        <td style = "text-align: center">$10$</td>
+        <td style = "text-align: center">$\dfrac{3761856}{362880} \approx 10.37$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$10$</td>
+        <td style = "text-align: center">$5$</td>
+        <td style = "text-align: center">$12.5$</td>
+        <td style = "text-align: center">$\dfrac{46402560}{3628800} \approx 12.79$</td>
+    </tr>
+    <tr>
+        <td style = "text-align: center">$11$</td>
+        <td style = "text-align: center">$5$ or $6$</td>
+        <td style = "text-align: center">$15$</td>
+        <td style = "text-align: center"><i>computing</i></td>
+    </tr>
 </table><p>My guess is for $n=11$, the maximum expected value will be slightly greater than the $15$ achieved from $k=5$ or $6$.</p>
+<p><b>(Update 2021.06.29...it seems that I may be pretty close.)</b></p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.06.28">2021.06.28<a class="anchor-link" href="#2021.06.28">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.06.25%20Classic%20Code.html">here</a>.</p>
+<h4 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h4><h4 id="2021.06.28--(Updated-2021.06.29)">2021.06.28  (Updated 2021.06.29)<a class="anchor-link" href="#2021.06.28--(Updated-2021.06.29)">&#182;</a></h4><p>Code can be found <a href="https://humanrickshaw.github.io/Riddler/2021.06.25%20Classic%20Code.html">here</a>.</p>
 
 </div>
 </div>
