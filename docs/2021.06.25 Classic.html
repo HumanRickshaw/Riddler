@@ -14310,7 +14310,7 @@ $$ = \dfrac{k \cdot (n-k)}{2}$$</p>
 <p>However, a larger expected value can be achieved.</p>
 <h3 id="First-card-is-$0$">First card is $0$<a class="anchor-link" href="#First-card-is-$0$">&#182;</a></h3><p>Two of the six possibilities yield $0$ points.</p>
 <h3 id="First-card-is-$1$">First card is $1$<a class="anchor-link" href="#First-card-is-$1$">&#182;</a></h3><p>Two of the six possibilities yield $1$ points.</p>
-<p>It is advantageous to go for the second card in this situation, as on possibility will yield $0$ points and one will yield $3$ points.</p>
+<p>It is advantageous to go for the second card in this situation, as one possibility will yield $0$ points and one will yield $3$ points.</p>
 <h3 id="First-card-is-$2$">First card is $2$<a class="anchor-link" href="#First-card-is-$2$">&#182;</a></h3><p>Two of the six possibilities yield $2$ points.</p>
 <h3 id="Expected-Value">Expected Value<a class="anchor-link" href="#Expected-Value">&#182;</a></h3><p>The maximum expected value is thus $\dfrac{7}{6}$.</p>
 <p>Note that the increase in expected value is because the additional $2$ is greater than the $1$ that is removed.</p>
@@ -14321,7 +14321,8 @@ $$ = \dfrac{k \cdot (n-k)}{2}$$</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>Assume $k$ cards have been flipped up (that have sum $p$), leaving $n-k$ to be seen $\left( \text{of sum }q = \dfrac{n(n-1)}{2} - p \right)$.</p>
 <p>The expected value added to the sum $p$ for the next flipped card is $\dfrac{q - p}{n-k}$.</p>
-<p>Therefore if the sum of the cards flipped up is greater than or equal to the sum of the cards remaining, one should stop playing!</p>
+<p>Therefore, if the sum of the remaining cards is greater than the flipped cards, one should stop playing.</p>
+<p>And likewise, if the sum of the cards flipped up is greater than or equal to the sum of the cards remaining, one should stop playing!</p>
 <h2 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit">&#182;</a></h2><p>My equation above is a <i>lower limit</i>. However, I did calculate some smaller deck values.</p>
 <table style = "width: 600px ">
     <tr>
