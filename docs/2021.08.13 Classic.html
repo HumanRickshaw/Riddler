@@ -14456,11 +14456,12 @@ $$\approx 18.8436$$</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit">&#182;</a></h2><p>I used a recursive algorithm to determine some more values.</p>
 <p>The algorithm sorts the dice from largest to smallest.  It freezes a single largest die.</p>
-<p>It compares the sum of the reamining dice with rerolling all the $n-1$ unfrozen die.</p>
-<p>It compares the sum of the largest $n-2$ dice and rerolling the smallest die with rerolling all the $n-1$ unfrozen die.</p>
-<p>It compares the sum of the largest $n-3$ dice and rerolling the smallest two dice with rerolling all the $n-1$ unfrozen die.</p>
-<p>It continues these comparisons, until the final sum largest unfrozen die with rerolling the smallest $n-2$ dice.</p>
-<p>If any of these comparisons are true, there is a reason to keep the largest die.</p>
+<p>It compares the sum of the remaining $n-1$ unfrozen dice with rerolling all of them.</p>
+<p>It compares the sum of the largest remaining $n-2$ unfrozen dice and rerolling the smallest die with rerolling all of them.</p>
+<p>It compares the sum of the largest remaining $n-3$ unfrozen dice and rerolling the smallest two dice with rerolling all of them.</p>
+<p>...</p>
+<p>The last comparison is the sum of the largest remaining die and rerolling the smallest $n-2$ dice with rerolling all of them.</p>
+<p>If any of these $n-1$ comparisons are true, there is a reason to keep the largest die.</p>
 <h3 id="Example:">Example:<a class="anchor-link" href="#Example:">&#182;</a></h3><p>For $6,5,5,5,4$, the 6 is frozen.</p>
 <p>$5+5+5+4 = 19 &gt; EV(4)$, so a 5 is kept.</p>
 <p>$5+5+4 = 14 &gt; EV(3)$, so a 5 is kept.</p>
