@@ -14455,10 +14455,27 @@ $$\approx 18.8436$$</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit">&#182;</a></h2><p>I used a recursive algorithm to determine some more values.</p>
-<p>For 5 dice, the maximum sum $\approx 24.436$</p>
+<p>The algorithm sorts the dice from largest to smallest.  It freezes a single largest die.</p>
+<p>It compares the sum of the reamining dice with rerolling all the $n-1$ unfrozen die.</p>
+<p>It compares the sum of the largest $n-2$ dice and rerolling the smallest die with rerolling all the $n-1$ unfrozen die.</p>
+<p>It compares the sum of the largest $n-3$ dice and rerolling the smallest two dice with rerolling all the $n-1$ unfrozen die.</p>
+<p>It continues these comparisons, until the final sum largest unfrozen die with rerolling the smallest $n-2$ dice.</p>
+<p>If any of these comparisons are true, there is a reason to keep the largest die.</p>
+<h3 id="Example:">Example:<a class="anchor-link" href="#Example:">&#182;</a></h3><p>For $6,5,5,5,4$, the 6 is frozen.</p>
+<p>$5+5+5+4 = 19 &gt; EV(4)$, so a 5 is kept.</p>
+<p>$5+5+4 = 14 &gt; EV(3)$, so a 5 is kept.</p>
+<p>$5+4 = 9 &gt; EV(2)$, so the 5 is kept.</p>
+<p>$4 &gt; EV(1)$, so the 4 is kept.</p>
+<p>However, notice that for $6,5,5,5,3$, it begins the same, freezing the 6.</p>
+<p>$5+5+5+3 &lt; EV(4)$.</p>
+<p>$5+5+5+ EV(1) &lt; EV(4)$.</p>
+<p>$5+5+EV(2) &lt; EV(4)$.</p>
+<p>$5+EV(3) &lt; EV(4)$.</p>
+<p>Since rerolling all 4 unfrozen is advantageous in <i>every</i> comparison, the four remaining dice are rerolled.</p>
+<h3 id="Larger-Values.">Larger Values.<a class="anchor-link" href="#Larger-Values.">&#182;</a></h3><p>For 5 dice, the maximum sum $\approx 24.436$</p>
 <p>For 6 dice, the maximum sum $\approx 30.153$</p>
-<p>It seems for large $N$, it is advantageous to only freeze 6s.</p>
-<p>For large $N$, the answer seems to be $\approx 6N - 7$.</p>
+<p>It seems for large $N$, it is advantageous to only freeze 6s until only a few dice remain.  I do not know the cutoff.</p>
+<p>For large $N$, the answer seems to be $\approx 6N - 6$.</p>
 
 </div>
 </div>
