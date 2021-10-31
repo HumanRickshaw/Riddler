@@ -14283,13 +14283,19 @@ $$EV(c, g) = \sum_{d=0}^c {g \choose d} \left(\frac{1}{2}\right)^g \left(c - d\r
 <h4 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h4><p>If there are more competitors than steps, then any competitor whose place is greater than the number of steps will have enough information to always cross.</p>
 <p>This can be represented as:
 <br>
-$$EV(c, g) = c-g + EV(g,g)$$</p>
+$$EV(c, g) = c-g + EV(g,g)$$
+<br>
+Since $d$ and $g-d$ have the same probabilities, it follows that $EV(g,g) = \dfrac{g}{2}$, thus for $c \ge g$:
+<br>
+$$EV(c, g) = c - \dfrac{g}{2}$$</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Recursive">Recursive<a class="anchor-link" href="#Recursive">&#182;</a></h3><h4 id="No-one-is-left.">No one is left.<a class="anchor-link" href="#No-one-is-left.">&#182;</a></h4>$$EV(0, g) = 0$$<h4 id="No-steps-are-left.">No steps are left.<a class="anchor-link" href="#No-steps-are-left.">&#182;</a></h4>$$EV(c, 0) = c$$<h4 id="All-other-scenarios.">All other scenarios.<a class="anchor-link" href="#All-other-scenarios.">&#182;</a></h4><p>Half the time the current player will die on the current step, leaving the remaining players and the remaining steps.</p>
+<h3 id="Recursive">Recursive<a class="anchor-link" href="#Recursive">&#182;</a></h3><h4 id="No-one-is-left.">No one is left.<a class="anchor-link" href="#No-one-is-left.">&#182;</a></h4><p>Everyone has died, or $EV(0, g) = 0$</p>
+<h4 id="No-steps-are-left.">No steps are left.<a class="anchor-link" href="#No-steps-are-left.">&#182;</a></h4><p>Everyone remaining lives, or $EV(c, 0) = c$</p>
+<h4 id="All-other-scenarios.">All other scenarios.<a class="anchor-link" href="#All-other-scenarios.">&#182;</a></h4><p>Half the time the current player will die on the current step, leaving the remaining players and the remaining steps.</p>
 <p>Half the time the current player will live on the current step, leaving the remaining players and the remaining steps.</p>
 <p>This can be represented as:
 <br>
