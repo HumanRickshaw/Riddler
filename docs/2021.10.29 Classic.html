@@ -14266,7 +14266,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Let $EV(c, g)$ represent the average number of $c$ competitors that survive $g$ glass squares on a bridge.</p>
-<p>I came up with an explicit and recursive definition.</p>
+<p>I came up with an explicit definition and a recursive definition.</p>
 
 </div>
 </div>
@@ -14280,7 +14280,7 @@ a.anchor-link {
 </ul><p>This can be represented as:
 <br>
 $$EV(c, g) = \sum_{d=0}^c {g \choose d} \left(\frac{1}{2}\right)^g \left(c - d\right)$$</p>
-<h4 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h4><p>If there are more competitors than steps, then any competitor whose place is greater than the number of steps will have enough information to always cross.</p>
+<h4 id="Note">Note<a class="anchor-link" href="#Note">&#182;</a></h4><p>If there are more competitors than steps, then any competitor whose place is greater than the number of steps will <i>always</i> have enough information to cross.</p>
 <p>This can be represented as:
 <br>
 $$EV(c, g) = c-g + EV(g,g)$$
@@ -14295,8 +14295,8 @@ $$EV(c, g) = c - \dfrac{g}{2}$$</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Recursive">Recursive<a class="anchor-link" href="#Recursive">&#182;</a></h3><h4 id="No-one-is-left.">No one is left.<a class="anchor-link" href="#No-one-is-left.">&#182;</a></h4><p>Everyone has died, or $EV(0, g) = 0$</p>
 <h4 id="No-steps-are-left.">No steps are left.<a class="anchor-link" href="#No-steps-are-left.">&#182;</a></h4><p>Everyone remaining lives, or $EV(c, 0) = c$</p>
-<h4 id="All-other-scenarios.">All other scenarios.<a class="anchor-link" href="#All-other-scenarios.">&#182;</a></h4><p>Half the time the current player will die on the current step, leaving the remaining players and the remaining steps.</p>
-<p>Half the time the current player will live on the current step, leaving the remaining players and the remaining steps.</p>
+<h4 id="All-other-scenarios.">All other scenarios.<a class="anchor-link" href="#All-other-scenarios.">&#182;</a></h4><p>Half the time the current competitor will die on the current step, leaving $c-1$ competitors and $g-1$ steps.</p>
+<p>Half the time the current competitor will live on the current step, leaving $c$ competitors and $g-1$ steps.</p>
 <p>This can be represented as:
 <br>
 $$EV(c, g) = \frac{1}{2}EV(c-1, g-1) + \frac{1}{2}EV(c, g-1)$$</p>
