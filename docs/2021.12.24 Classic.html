@@ -14273,13 +14273,25 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>4 results in some order of 3 and 4, which yields $\dfrac{3+4}{\sum {4}} = 0.7$</p>
-<p>6 results in some order of 4, 5, and 6, which yields $\dfrac{4+5+6}{\sum {6}} \approx 0.71$</p>
-<p>10 results in some order of 6, 7, 8, 9, and 10, which yields $\dfrac{6+7+8+9+10}{\sum {10}} \approx 0.73$</p>
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>$N = 4$ results in the order of $[3,4]$, which yields $\dfrac{3+4}{\sum {4}} = 0.7$</p>
+<p>$N = 6$ results in either $[5, 4, 6]$ or $[5, 6, 4]$, which yields $\dfrac{4+5+6}{\sum {6}} \approx 0.71$</p>
+<p>$N = 10$ results in some order of $[6, 7, 8, 9, 10]$, which yields $\dfrac{6+7+8+9+10}{\sum {10}} \approx 0.73$</p>
 <p>Every other $N &gt; 6$ has at least two primes in its top half, resulting in not a complete top half.  $3$ and $5$ are odd and cannot have a complete top half.</p>
-<p>I ran some code to confirm results.</p>
+<p>I ran some code to confirm results. For each $N$, $3 \le N \le 30$, an order to achieve the maximum sum follows.</p>
 <p><img src = "2021.12.24 Classic1.png"></p>
+<p>Here is the fraction of the total.</p>
 <p><img src = "2021.12.24 Classic2.png"></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Note that the upper limit of the fraction is the sum of the top half of the checks divided by the sum of all checks.</p>
+<p>For even $N$,</p>
+$$\dfrac{\left(\frac{N}{2}+1 + N\right) \cdot \frac{N}{4}}{(1+N) \cdot \frac{N}{2}}$$<p><br>
+$$=\dfrac{\frac{3N^2+2N}{8}}{\frac{N+N^2}{2}}$$
+<br>
+$$=\dfrac{3N+2}{4N+4}$$</p>
 
 </div>
 </div>
