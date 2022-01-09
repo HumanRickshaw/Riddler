@@ -2,70 +2,19 @@
 
 library(comprehenr)
 library(dplyr)
-library(plotly)
-library(readxl)
+library(ggplot2)
 library(shiny)
 library(tidyr)
 
 
 
-##############CONSTANTS##############
 #No Scientific Notation.
 options(scipen = 999)
 
 
-
-#48 States and District of Columbia in alphabetical order.
-state_list <- c(state.name[1:8],
-                "District of Columbia",
-                state.name[9:50]) 
-
-state_list <- state_list[!(state_list %in% c("Alaska", "Hawaii"))]
-
-
-
-#48 States and DC in alphabetical order. 
-state_abb <- c(state.abb[1:8],
-               "DC",
-               state.abb[9:50])
-
-state_abb<- state_abb[!(state_abb %in% c("AK", "HI"))]
-
-##############READ FILES##############
-
-#Read data.
-#Total voting population is sum of Red, Blue, and Other votes.
-df <- data.frame(read_excel("./States Area.xlsx")) %>%
-  filter(!(state %in% c("Alaska", "Hawaii", "United States"))) %>%
-  mutate(area = as.integer(area))
-
-#DF of only USA total data.
-df_usa <- df %>%
-  filter(state == "United States")
-
-#DF of 48 states and DC.
-df <- df %>%
-  mutate(abb = state_abb)
-
-area_48 <- sum(df$area)
 ##############FUNCTIONS##############
 
-#Converts to %.
-perc <- function(num, den) {
-  paste(round(100*num / den, 3), "%", sep = "")
-  }
 
-
-
-#Summary text for Border, West, and East.
-summary_text <- function(region, num, den) {
-  
-  paste("The", region, "is",
-        prettyNum(num, big.mark = ","),
-        "square miles, or",
-        perc(num, area_48),
-        "of the contiguous US.")
-}
 
 
 
@@ -77,7 +26,7 @@ ui <- fluidPage(
              ".shiny-output-error {visibility: hidden;}",
              ".shiny-output-error:before {visibility: hidden;}"),
   
-  titlePanel("Dividing the Country"),
+  titlePanel("Can You Create a Chain Drawing?"),
   sidebarLayout(
     
     
@@ -85,34 +34,31 @@ ui <- fluidPage(
     ##############SIDEBAR PANEL##############
     sidebarPanel(width = 3,
                  #Used in all tabs.
-                 h6("Rohan Lewis, 2021.06.14"),
+                 h6("Rohan Lewis, 2021.08.02"),
                  br(),
-                 h6("Add states by typing or dropdown."),
-                 h6("Remove states by delete or backspace."),
-                 h6("The Eastern States are chosen automatically."),
+                 radioButtons("ar",
+                              "Choose Aspect Ratio",
+                              choices = c(1, "Auto"),
+                              selected = 1),
                  br(),
-                 selectInput("st_b",
-                             "Border States:",
-                             choices = state_list,
-                             selected = c("Colorado", "Illinois", "Missouri", 'Nebraska', "New Mexico"),
-                             multiple = TRUE),
+                 sliderInput("f",
+                             "Choose f",
+                             min = 0.001,
+                             max = 0.999,
+                             step = 0.001,
+                             value = 0.8),
                  br(),
-                 selectInput("st_w",
-                             "Western States:",
-                             choices = state_list,
-                             selected = c("Arizona", "California", "Idaho", "Iowa",
-                                          "Minnesota", "Montana", "Oregon",
-                                           "Nevada", "North Dakota", "South Dakota", 
-                                          "Utah", "Washington", "Wisconsin", "Wyoming"),
-                             multiple = TRUE),
-                 checkboxInput("yoop",
-                               "Include Upper Peninsula in West",
-                               value = TRUE)),
+                 sliderInput("angle",
+                             HTML("Choose &theta;"),
+                             min = 0.1,
+                             max = 179.9,
+                             step = 0.1,
+                             value = 45)),
     
     
     
     ##############MAIN PANEL##############
-    mainPanel(plotlyOutput("plot", height = 600),
+    mainPanel(plotOutput("plot", height = 600),
               verbatimTextOutput("summary"))))
 
 
@@ -121,113 +67,126 @@ ui <- fluidPage(
 server <- function(input, output, session) {
 
   ##############Reactive##############
-  
-  #If a state is added to the Border, remove it from the West, if applicable.
-  observeEvent(input$st_b,
-               {
-                 for (state in input$st_b){
-                   if (state %in% input$st_w) {
-                     
-                     new_states <- input$st_w[input$st_w != state]
-                     
-                     updateSelectInput(session,
-                                       "st_w",
-                                       choices = state_list,
-                                       selected = new_states)
-                   }
-                 }
-                })
-  
-  
-  
-  #If a state is added to the West, remove it from the Border, if applicable.
-  observeEvent(input$st_w,
-               {
-                 for (state in input$st_w){
-                   if (state %in% input$st_b) {
-                     
-                     new_states <- input$st_b[input$st_b != state]
-                     
-                     updateSelectInput(session,
-                                       "st_b",
-                                       choices = state_list,
-                                       selected = new_states)
-                   }
-                 }
-               })
-  
-  
-  
-  #Eastern States are those not in the Border or West.
-  st_e <- reactive({
-    
-    state_list[!(state_list %in% c(input$st_b, input$st_w))]
 
+  #Paperclip xs.
+  xs <- reactive ({
+    
+    xs <- c(0, 1)
+    for (i in 2:100) {
+      x <- xs[i] + (input$f^(i-1))*cos((i-1)*input$angle*pi/180)
+      xs <- c(xs, x)
+    }
+    xs
+  })
+
+  
+  
+  #Paperclip ys.
+  ys <- reactive ({
+    
+    ys <- c(0, 0)
+    for (i in 2:100) {
+      y <- ys[i] + (input$f^(i-1))*sin((i-1)*input$angle*pi/180)
+      ys <- c(ys, y)
+    }
+    ys
+  })
+
+  
+  
+  #Center of ink arc.
+  center <- reactive({ 1 / (1 - input$f^2) })
+  
+  
+  
+  #Radius of ink arc.
+  radius <- reactive({ input$f * center() })
+  
+  
+  
+  #Angle traced by ink arc.
+  angle <- reactive({
+    
+    Arg(1 / (1 - input$f * complex(real = cos(pi*input$angle/180),
+                                   imaginary = sin(pi*input$angle/180))) - center())
+  })
+    
+   
+   
+  #Length of ink arc. 
+  arc_length <- reactive({ angle() * radius() })
+  
+  
+  
+  #Arc xs.
+  arc_xs <- reactive ({
+    
+    xs <- NULL
+    for (i in 1:1000) {
+      
+      theta <- i * angle() / 1000
+      x <- center() + radius() * cos(theta)
+      xs <- c(xs, x)
+    }
+    xs
   })
   
   
   
-  #Add a column to color the region and for hovertext.
-  fill_df <- reactive({
-    df %>%
-      mutate(fill = ifelse(state %in% input$st_b,
-                           0,
-                           ifelse(state %in% input$st_w,
-                                  1, 2)),
-             hover = paste(state,
-                           ":  ",
-                           prettyNum(area, big.mark = ","),
-                           " square miles",
-                           sep =""))
+  #Arc ys.
+  arc_ys <- reactive ({
+    
+    ys <- NULL
+    for (i in 1:1000) {
+      
+      theta <- i * angle() / 1000
+      y <- radius() * sin(theta)
+      ys <- c(ys, y)
+    }
+    ys
   })
-  
+
   
     
   ##############States to Sum##############
 
-  output$plot <- renderPlotly({
+  output$plot <- renderPlot({
     
-    g <- list(scope = 'usa',
-              projection = list(type = 'albers usa'),
-              showlakes = TRUE,
-              lakecolor = toRGB('white'))
+    #Paperclips.
+    g <- ggplot() + geom_path(mapping = aes(xs(), ys()),
+                              colour = '#1F968B',
+                              size = 0.5)
     
-    #Initialize
-    map <- plot_geo(fill_df(), locationmode = 'USA-states')
+    #Ink arc.
+    g <- g + geom_path(mapping = aes(arc_xs(), arc_ys()), #geom_path(mapping = aes(Re(drawing()), Im(drawing())),
+                       colour = '#481567',
+                       size = 1.2)
     
-    map <- map %>% add_trace(z = ~fill,
-                             text = ~hover,
-                             hoverinfo = 'text',
-                             locations = ~abb,
-                             color = ~fill,
-                             colors = c("grey", "#481567FF", "#1F968BFF"))
+    #Axes.    
+    g <- g + scale_x_continuous(expand =  c(0, 0), breaks = NULL)
+    g <- g + scale_y_continuous(expand =  c(0, 0), breaks = NULL)
+
+    #Format.
+    g <- g + theme(plot.title = element_text(hjust = 0.5, size = 18, face = "bold"),
+                   axis.text.x = element_blank(),
+                   axis.title.x = element_blank(),
+                   axis.text.y = element_blank(),
+                   axis.title.y = element_blank())
     
-    title_text <- "Sum of Areas of Selected States"
-    
-    map <- map %>% hide_colorbar()
-    
-    map %>% layout(title = list(text = title_text, y = 0.965),
-                   font = list(size = 22),
-                   geo = g)
+    #User defined aspect ratio.
+    if (input$ar == 1){
+     g + coord_fixed(ratio = 1)
+    }
+    else {
+      g
+    }
   })
   
+  
+  
   output$summary <- renderText({
-    
-    area_border = sum(fill_df()[fill_df()$fill == 0, "area"])
-    area_west = sum(fill_df()[fill_df()$fill == 1, "area"]) 
-    area_east = sum(fill_df()[fill_df()$fill == 2, "area"])
-    
-    #Add and subtract the Upper Peninsula from the West and East, respectively.
-    if (input$yoop) {
-      
-      area_yoop = 16377
-      area_west = area_west + area_yoop
-      area_east = area_east - area_yoop
-    }
-    
-    paste(summary_text("Border", area_border), "\n\n",
-          summary_text("West", area_west), "\n\n",
-          summary_text("East", area_east), sep = "")
+    paste("Degrees of Arc: ", 180 * angle() / pi,
+          "\n\nLength of Trace: ", arc_length())
     })
 }
 
