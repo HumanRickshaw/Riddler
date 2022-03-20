@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>2022.03.11 Express</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2022.03.18 Express</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,204 +14259,33 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Can-You-Score-Some-Basketball-Tickets?">Can You Score Some Basketball Tickets?<a class="anchor-link" href="#Can-You-Score-Some-Basketball-Tickets?">&#182;</a></h1><h2 id="Riddler-Express"><a href="https://fivethirtyeight.com/features/can-you-score-some-basketball-tickets/">Riddler Express</a><a class="anchor-link" href="#Riddler-Express">&#182;</a></h2><p data-paragraph="main">From James Marek comes some madness in the month of March:</p><p data-paragraph="main">According to James, there was a scavenger hunt this year to determine which lucky individuals received tickets to the Duke’s home men’s basketball game against rival North Carolina. (Spoiler alert: Underdog North Carolina won <a href="https://www.espn.com/mens-college-basketball/game/_/gameId/401369869" target="_blank" rel="noopener">the game</a>.)</p><p data-paragraph="main">The original scavenger hunt had five tasks. For the purposes of this riddle, let’s say it has three tasks. For each task, whoever finishes first gets 1 point, whoever finishes second gets 2 points and so on. Your score is the total number of points you earn across all three tasks, and lower scores are better. Knowing how popular basketball is at Duke, it’s safe to say that many people are participating. But only the top-10 finishers in the scavenger hunt will get tickets.</p><p data-paragraph="main">Without knowing how anyone else did on the scavenger hunt, what is the highest score that <em>guarantees</em> you are in the top 10? (Being tied for 10th is acceptable.)</p>
+<h1 id="Is-It-Anyone's-Birthday?">Is It Anyone's Birthday?<a class="anchor-link" href="#Is-It-Anyone's-Birthday?">&#182;</a></h1><h2 id="Riddler-Express"><a href="https://fivethirtyeight.com/features/is-it-anyones-birthday/">Riddler Express</a><a class="anchor-link" href="#Riddler-Express">&#182;</a></h2><p data-paragraph="main">From James Nugent comes a puzzle that goes out to all the folks with March birthdays:</p><p data-paragraph="main">Earlier today, James’s boss was surprised to find out that not only did no one on their team have a birthday this week, but that nobody was celebrating a birthday for the entire <em>month</em>. With a total of 40 people on the team, the probability of this happening seemed to be miniscule.</p><p data-paragraph="main">But was that really the case? What was the probability that none of the 40 people had birthdays this month? (For the purpose of this riddle, assume that a year consists of 12 equally long months. It’s a sufficiently good approximation!)</p><p data-paragraph="main"><em>Extra credit:</em> What is the probability that there is <em>at least one</em> month in the year during which none of the 40 people had birthdays (not necessarily <em>this</em> month)?</p>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>In order to <em>guarantee</em> top, one must assume the other nine participants have as low a score as possible.</p>
-<p>This means everyone in the top 10 scored in the top 10 in each of the three tasks.</p>
-$$3 \cdot \sum \limits_{i = 1}^{10} i = 165$$
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>5 participants can receive 16 points and 5 can receive 17 points.</p>
-<table width = "350 px">
-    <tr>
-        <th style = "text-align:center">Participant</th>
-        <th style = "text-align:center">Task #1</th>
-        <th style = "text-align:center">Task #2</th>
-        <th style = "text-align:center">Task #3</th>
-        <th style = "text-align:center">Total</th>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$1$</td>
-        <td style = "text-align:center">$1$</td>
-        <td style = "text-align:center">$6$</td>
-        <td style = "text-align:center">$9$</td>
-        <td style = "text-align:center">$16$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$2$</td>
-        <td style = "text-align:center">$2$</td>
-        <td style = "text-align:center">$8$</td>
-        <td style = "text-align:center">$6$</td>
-        <td style = "text-align:center">$16$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$3$</td>
-        <td style = "text-align:center">$3$</td>
-        <td style = "text-align:center">$10$</td>
-        <td style = "text-align:center">$3$</td>
-        <td style = "text-align:center">$16$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$4$</td>
-        <td style = "text-align:center">$4$</td>
-        <td style = "text-align:center">$2$</td>
-        <td style = "text-align:center">$10$</td>
-        <td style = "text-align:center">$16$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$5$</td>
-        <td style = "text-align:center">$5$</td>
-        <td style = "text-align:center">$9$</td>
-        <td style = "text-align:center">$2$</td>
-        <td style = "text-align:center">$16$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$6$</td>
-        <td style = "text-align:center">$6$</td>
-        <td style = "text-align:center">$4$</td>
-        <td style = "text-align:center">$7$</td>
-        <td style = "text-align:center">$17$</td>
-    </tr>     
-    <tr>
-        <td style = "text-align:center">$7$</td>
-        <td style = "text-align:center">$7$</td>
-        <td style = "text-align:center">$5$</td>
-        <td style = "text-align:center">$5$</td>
-        <td style = "text-align:center">$17$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$8$</td>
-        <td style = "text-align:center">$8$</td>
-        <td style = "text-align:center">$1$</td>
-        <td style = "text-align:center">$8$</td>
-        <td style = "text-align:center">$17$</td>
-    </tr> 
-    <tr>
-        <td style = "text-align:center">$9$</td>
-        <td style = "text-align:center">$9$</td>
-        <td style = "text-align:center">$7$</td>
-        <td style = "text-align:center">$1$</td>
-        <td style = "text-align:center">$17$</td>
-    </tr> 
-    <tr>
-        <td style = "text-align:center">$10$</td>
-        <td style = "text-align:center">$10$</td>
-        <td style = "text-align:center">$3$</td>
-        <td style = "text-align:center">$4$</td>
-        <td style = "text-align:center">$17$</td>
-    </tr> 
-</table>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Note that</p>
-$$3 \cdot \sum \limits_{i = 1}^{11} i = 198$$<p>11 players can each receive 18 points.</p>
-<table width = "350 px">
-    <tr>
-        <th style = "text-align:center">Participant</th>
-        <th style = "text-align:center">Task #1</th>
-        <th style = "text-align:center">Task #2</th>
-        <th style = "text-align:center">Task #3</th>
-        <th style = "text-align:center">Total</th>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$1$</td>
-        <td style = "text-align:center">$1$</td>
-        <td style = "text-align:center">$11$</td>
-        <td style = "text-align:center">$6$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$2$</td>
-        <td style = "text-align:center">$2$</td>
-        <td style = "text-align:center">$5$</td>
-        <td style = "text-align:center">$11$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$3$</td>
-        <td style = "text-align:center">$3$</td>
-        <td style = "text-align:center">$10$</td>
-        <td style = "text-align:center">$5$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$4$</td>
-        <td style = "text-align:center">$4$</td>
-        <td style = "text-align:center">$4$</td>
-        <td style = "text-align:center">$10$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$5$</td>
-        <td style = "text-align:center">$5$</td>
-        <td style = "text-align:center">$9$</td>
-        <td style = "text-align:center">$4$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$6$</td>
-        <td style = "text-align:center">$6$</td>
-        <td style = "text-align:center">$3$</td>
-        <td style = "text-align:center">$9$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>     
-    <tr>
-        <td style = "text-align:center">$7$</td>
-        <td style = "text-align:center">$7$</td>
-        <td style = "text-align:center">$8$</td>
-        <td style = "text-align:center">$3$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$8$</td>
-        <td style = "text-align:center">$8$</td>
-        <td style = "text-align:center">$2$</td>
-        <td style = "text-align:center">$8$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr> 
-    <tr>
-        <td style = "text-align:center">$9$</td>
-        <td style = "text-align:center">$9$</td>
-        <td style = "text-align:center">$7$</td>
-        <td style = "text-align:center">$2$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr> 
-    <tr>
-        <td style = "text-align:center">$10$</td>
-        <td style = "text-align:center">$10$</td>
-        <td style = "text-align:center">$1$</td>
-        <td style = "text-align:center">$7$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>
-    <tr>
-        <td style = "text-align:center">$11$</td>
-        <td style = "text-align:center">$11$</td>
-        <td style = "text-align:center">$6$</td>
-        <td style = "text-align:center">$1$</td>
-        <td style = "text-align:center">$18$</td>
-    </tr>     
-</table>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>Swapping two of the numbers in the above table easily changes two of the scores to 17 and 19.  19 is clearly too large as it would be out of the top 10.</p>
-<p>In order for 18 to be too large, every other participant in the top 10 would have to have a score less than 18.</p>
-<p>The sum of the top 11 players would then be less than 198.  This is a contradiction, as the minimum sum is 198.</p>
-<p>Therefore, 18 is the highest score that guarantees a spot in the top 10.</p>
+<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>A randomly selected unknown person has an $\dfrac{11}{12}$ probability of not having a birthday this month.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h1><h4 id="2022.03.14">2022.03.14<a class="anchor-link" href="#2022.03.14">&#182;</a></h4>
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>None of the 40 employees having a birthday this month is</p>
+$$\left( \dfrac{11}{12}\right)^{40} \approx 0.0308$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit">&#182;</a></h2><p>Using <a href="https://mathworld.wolfram.com/Multichoose.html">bars and stars</a>, the total number of ways 40 people's birthdays can be distributed over 12 months is:
+$${40+12-1 \choose 12-1}$$</p>
+<p>In order to solve the extra credit, use complementary counting on the opposite, that is, assume that each month has <em>at least one</em> birthday.  That leaves 28 people to be distributed over 12 months:</p>
+$${28+12-1 \choose 12-1}$$<p>The answer is:</p>
+$$1 - \dfrac{\dfrac{39!}{28!11!}}{\dfrac{51!}{40!11!}}$$$$ = 1 - \dfrac{39!40!}{28!51!}$$$$ = 1 - \dfrac{39\cdot38\cdot\cdot\cdot 29}{51\cdot50\cdot\cdot\cdot 41} \approx 0.9648$$
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Rohan-Lewis">Rohan Lewis<a class="anchor-link" href="#Rohan-Lewis">&#182;</a></h1><h4 id="2022.03.19">2022.03.19<a class="anchor-link" href="#2022.03.19">&#182;</a></h4>
 </div>
 </div>
 </body>
