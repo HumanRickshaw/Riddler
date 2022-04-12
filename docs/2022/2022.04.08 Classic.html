@@ -14259,80 +14259,89 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Can-You-Be-Mediocre-Enough-To-Win?">Can You Be Mediocre Enough To Win?<a class="anchor-link" href="#Can-You-Be-Mediocre-Enough-To-Win?">&#182;</a></h1><h2 id="Ridler-Classic"><a href="https://fivethirtyeight.com/features/can-you-be-mediocre-enough-to-win/">Ridler Classic</a><a class="anchor-link" href="#Ridler-Classic">&#182;</a></h2><p data-paragraph="main">This week’s Classic also comes from Ben Orlin, although it’s relatively mediocre compared to the Express.</p><p data-paragraph="main">In the three-player Game of Mediocrity, you win by not winning too much.</p><p data-paragraph="main">Each round, every player secretly picks a number from 0 to 10. The numbers are simultaneously revealed, and the median number wins that number of points. (If two or more players pick the same number, then the winner is randomly selected from among them.)</p><div class="wp-block-image"><figure class="aligncenter size-full"><img loading="lazy" width="512" height="250" src="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png" alt="Player A says 6, B says 3, and C says 2. B is the winner, having said the median, and earns 3 points." class="wp-image-330666 jetpack-lazy-image" data-src="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png" data-srcset="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?w=512 1x, https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?w=1024 2x" data-lazy-srcset="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?w=512 1x, https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?w=1024 2x" data-lazy-src="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img loading="lazy" width="512" height="250" src="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png" alt="Player A says 6, B says 3, and C says 2. B is the winner, having said the median, and earns 3 points." class="wp-image-330666" srcset="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?w=512 1x, https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?w=1024 2x" data-src="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png" data-srcset="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?w=512 1x, https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png?w=1024 2x"></noscript></figure></div><p data-paragraph="main">After five rounds, the winner is whoever has the median number of points. (Again, if two or more players have the same score, then the winner is randomly selected from among them.)</p><p data-paragraph="main">With one round remaining, players A, B and C have 6, 8 and 10 points, respectively. Player A sighs and writes down “3,” but fails to do so in secret. Players B and C both see player A’s number (and both see that the other saw A’s number), and will take care to write their own numbers in secret. Assuming everyone plays to win, what numbers should B and C choose?</p>
+<h1 id="Can-You-Be-Mediocre-Enough-To-Win?">Can You Be Mediocre Enough To Win?<a class="anchor-link" href="#Can-You-Be-Mediocre-Enough-To-Win?">&#182;</a></h1><h2 id="Ridler-Classic"><a href="https://fivethirtyeight.com/features/can-you-be-mediocre-enough-to-win/">Ridler Classic</a><a class="anchor-link" href="#Ridler-Classic">&#182;</a></h2><p data-paragraph="main">This week’s Classic also comes from Ben Orlin, although it’s relatively mediocre compared to the Express.</p><p data-paragraph="main">In the three-player Game of Mediocrity, you win by not winning too much.</p><p data-paragraph="main">Each round, every player secretly picks a number from 0 to 10. The numbers are simultaneously revealed, and the median number wins that number of points. (If two or more players pick the same number, then the winner is randomly selected from among them.)</p><p><img src="https://fivethirtyeight.com/wp-content/uploads/2022/04/mediocre.png"></p>
+<p data-paragraph="main">After five rounds, the winner is whoever has the median number of points. (Again, if two or more players have the same score, then the winner is randomly selected from among them.)</p><p data-paragraph="main">With one round remaining, players A, B and C have 6, 8 and 10 points, respectively. Player A sighs and writes down “3,” but fails to do so in secret. Players B and C both see player A’s number (and both see that the other saw A’s number), and will take care to write their own numbers in secret. Assuming everyone plays to win, what numbers should B and C choose?</p>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Players B and C have 11 strategies each.  This yields 121 outcomes.  The following table details the winnings to each player in the 5th round for each of the 121 outcomes.  Scores are denoted in the form (A,B,C).</p>
 <p><img src = "2022.04.08 Classic Score.png"></p>
-<p>The ways each player can win the entire game is described below.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Player-A-is-the-most-Mediocre.">Player A is the most Mediocre.<a class="anchor-link" href="#Player-A-is-the-most-Mediocre.">&#182;</a></h3><p>Player A can win a maximum of 3 points in the 5th round.  In order for Player A to win overall, they must win the 5th round and have their final score between B's 8 points and C's 10 points.</p>
-<p>In order for A's 3 to be the (only) median:</p>
-<ul> 
-    <li>Occurs when $B < 3 < C$ or $C < 3 < B$.</li>
-    <li>42 <b style = "color: #DCE319;">outcomes</b> fit this scenario.</li>
-</ul>
+<p>The most Mediocre player in each scenario is shown below.</p>
+<p><img src = "2022.04.08 Classic Winner.png"></p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Player-B-is-the-most-Mediocre.">Player B is the most Mediocre.<a class="anchor-link" href="#Player-B-is-the-most-Mediocre.">&#182;</a></h3><p>In order for Player B to win overall, B must remain as the median value.  There are several ways this can occur.</p>
-<ul>
-    <li>The 5th round median is 4 or greater.
+<h2 id="Details-of-Outcomes.">Details of Outcomes.<a class="anchor-link" href="#Details-of-Outcomes.">&#182;</a></h2><ol>
+    <li>$B < 2$, $C < 3$
         <ul>
-            <li>Occurs when $4 \le C$ and $C \le B$.</li>
-            <li>28 <b style = "color: #33638D;">outcomes</b> fit this scenario.</li>
-        </ul>
+            <li>No matter what the median is for the 5th round, and who is randomly chosen, B will be the Most Mediocre.</li>
+            <li>6 outcomes fits this scenario.</li>
+        </ul><br>
     </li>
-    <li>A & B receive 1.5 points.
+    <li>$B = 2$, $C < 3$
         <ul>
-            <li>Occurs when $A = B = 3$ and $C \ne 3$.</li>
-            <li>10 <b style = "color: #440154;">outcomes</b> fit this scenario.</li>
-        </ul>
+            <li>If C chooses 2, B or C could be the random winner of the 5th round.  This yields (6,10,10) and (6,8,12).</li>
+            <li>If C chooses 0 or 1, B wins the 5th round.  This yields (6,10,10).</li>
+            <li>Either way, B or C could be the Most Mediocre.</li>
+            <li>3 outcomes fits this scenario.</li>
+        </ul><br>
     </li>
-    <li>A & C receive 1.5 points.
+    <li>$B,C = 3$
         <ul>
-            <li>Occurs when $A = C = 3$ and $B \ne 3$.</li>
-            <li>10 <b style = "color: #453781;">outcomes</b> fit this scenario.</li>
-        </ul>
+            <li>If A is randomly chosen, the final score is (9,8,10).  A is the Most Mediocre.</li>
+            <li>If B is randomly chosen, the final score is (6,11,10).  C is the Most Mediocre.</li>
+            <li>If C is randomly chosen, the final score is (6,8,13).  B is the Most Mediocre.</li>
+            <li>1 outcomes fits this scenario.</li>
+        </ul><br>
     </li>
-    <li>The 5th round median is 2 or less.
+    <li>$B = 3$
         <ul>
-            <li>Occurs when $B < 3$ and $C < 3$.</li>
-            <li>7 <b style = "color: #238A8D;">outcomes</b> fit this scenario.</li>
-            <li>2 <b style = "color: #29AF7F;">ties</b> also fit this scenario.</li>
-        </ul>
+            <li>If A is randomly chosen, the final score is (9,8,10).  A is the Most Mediocre.</li>
+            <li>If B is randomly chosen, the final score is (6,11,10).  C is the Most Mediocre.</li>
+            <li>10 outcomes fit this scenario.</li>
+        </ul><br>
     </li>
-    <li>All players receive 1 point.
+    <li>$C = 3$
         <ul>
-            <li>Occurs when $A = B = C = 3$.</li>
-            <li>1 <b style = "color: #440154;">outcome</b> fits this scenario.</li>
-        </ul>
+            <li>If A is randomly chosen, the final score is (9,8,10).  A is the Most Mediocre.</li>
+            <li>If C is randomly chosen, the final score is (6,8,13).  B is the Most Mediocre.</li>
+            <li>10 outcomes fits this scenario.</li>
+        </ul><br>
     </li>
-</ul>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Player-C-is-the-most-Mediocre.">Player C is the most Mediocre.<a class="anchor-link" href="#Player-C-is-the-most-Mediocre.">&#182;</a></h3><p>In order for Player C to win overall, B must get 3 or more points in round 5, and thus C's 10 will be the final median score.</p>
-<p>In order for B's choice to be the median:</p>
-<ol>
-    <li>B & C choose greater than 3 and C has to choose a greater number than B:
+    <li>$C < 3 < B$ or $B < 3 < 3$
         <ul>
-            <li>Occurs when $4 \le B \le 9$ and $B < C \le 10$.</li>
-            <li>21 <b style = "color: #73D055;">outcomes</b> fit these two scenarios.</li>
-        </ul>
+            <li>A wins the 5th round.</li>
+            <li>The final score is (9,8,10).  A is the Most Mediocre.</li>
+            <li>42 outcomes fit this scenario.</li>
+        </ul><br>
     </li>
-    <li>B & C choose less than 3:
+    <li>$B,C = x$, $3 < x$
         <ul>
-            <li>Occurs when $B = 2$ and $C = 0 \text{ or } 1$</li>
-            <li>2 <b style = "color: #29AF7F;">ties</b> fit this scenario.</li>
+            <li>B or C could be the random winner of the 5th round.</li>
+            <li>This yields (6,8+x,10) and (6,8,10+x).  B or C could be the Most Mediocre.</li>
+            <li>7 outcomes fits this scenario.</li>
+        </ul><br>
+    </li>
+    <li>$B = x$, $4 \le B < C$
+        <ul>
+            <li>B wins the 5th round.</li>
+            <li>This yields (6,8+x,10).  C is the Most Mediocre.</li>
+            <li>21 outcomes fits this scenario.</li>
+        </ul><br>
+    </li>
+    <li>$C = x$, $4 \le C < B$
+        <ul>
+            <li>C wins the 5th round.</li>
+            <li>This yields (6,8,10+x).  B is the Most Mediocre.</li>
+            <li>21 outcomes fits this scenario.</li>
         </ul>
     </li>
 </ol>
@@ -14340,12 +14349,20 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>The following table summarizes all 121 outcomes.</p>
-<p><img src = "2022.04.08 Classic Winner.png"></p>
-<p>B can guarantee a win by choosing 3.</p>
-<p>A and B will both receive 1.5 points, and the final score will be (7.5, 9.5, 10).</p>
-<p>In the off chance that C also chooses 3, all players will receive 1 point, and the final score will be (7, 9, 11).</p>
-<p>This is the only (weakly) dominant strategy that any player has.</p>
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>Using Higher Order Dominance, B and C will successively eliminate inferior strategies, and consider what is inferior and eliminated for the other.  The following happens.</p>
+<ol>
+    <li><b style = "color:#FDE275;">B will not choose 2 or 3</b>, as they can do as good or better for every outcome by choosing 0 or 1.</li>
+    <li><b style = "color:#B8DE29;">C will not choose 0, 1, 2, or 3</b>, as they do not win in any outcome.</li>
+    <li><b style = "color:#73D055;">B will not choose 0 or 1</b>, as they do not win in any outcome.</li>
+    <li><b style = "color:#3CBB75;">B & C will not choose 4</b>, as they can do as good or better by choosing 5-10.</li>
+    <li><b style = "color:#20A387;">B & C will not choose 5</b>, as they can do as good or better by choosing 6-10.</li>
+    <li><b style = "color:#238A8D;">B & C will not choose 6</b>, as they can do as good or better by choosing 7-10.</li>
+    <li><b style = "color:#2D708E;">B & C will not choose 7</b>, as they can do as good or better by choosing 8-10.</li>
+    <li><b style = "color:#39568C;">B & C will not choose 8</b>, as they can do as good or better by choosing 9 or 10.</li>
+    <li><b style = "color:#453781;">B & C will not choose 9</b>, as they can do as good or better by choosing 10.</li>
+</ol><p><img src = "2022.04.08 Classic Final.png"></p>
+<p>The optimum strategy is for B and C to both choose 10, and half the time be the Most Mediocre.</p>
+<p>This outcome is a Nash Equilibrium, as neither player can gain by deviating.</p>
 
 </div>
 </div>
