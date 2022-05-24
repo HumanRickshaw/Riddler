@@ -14267,7 +14267,8 @@ a.anchor-link {
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>I started with a point 1 away from the center, (0,1).  This was the sole stop in the first stops. The weight, or probability of this stop is 1.  I ran some code:</p>
 <ul>
     <li>Starting with the first stop in the previous list of stops, I calculated the slope from the center to that stop.  I also calculated the tangential slope.</li>
-    <li>Using the stop and the slopes from the previous step, the two tangential child stops were calculated and given a weight of $\dfrac{1}{4}$ of the parent stop was attached to them.  The stop in the radial direction was given a weight of $\dfrac{1}{2}$ of the parent stop</li>
+    <li>Using the stop and the tangential slope, the two tangential child stops were calculated and given a weight of $\dfrac{1}{4}$ of the parent stop.</li>
+    <li>Using the stop and the slope, the radial direction child was given a weight of $\dfrac{1}{2}$ of the parent stop.</li>
     <li>These three new child stops were appended to the new stops.</li>
     <li>This process was repeated until every parent stop in the previous stops spawned three new child stops in the new stops.</li>
     <li>I repeated this process until I had 10 lists of stops.</li>
