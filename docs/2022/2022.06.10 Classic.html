@@ -14279,15 +14279,15 @@ a.anchor-link {
     <li>For $0 \le g < 20$, the range of either origins or landing locations is $g+20$.</li>
     <li>For $20 \le g \le 80$, the range of either origins or landing locations is always $40$.</li>
     <li>For $80 < g \le 100$, the range of either origins or landing locations is $120 - g$.</li>
-</ul><p>Dividing origins by landing locations yields 1 for all.  Thus, the weight of a jump from any location converges to being equal.</p>
-<p>Since the grasshopper is equally likely to be in any starting position, the distribution of probabilities should converge to be in the same ratio as the distribution of ranges.</p>
+</ul><p>Dividing origins by landing locations yields 1 for all.  Since the grasshopper is equally likely to be in any starting position, the probability of a single jump from any location converges to being equal.</p>
+<p>Since multiple jumps land on a location, the distribution of probabilities should converge to be in the same ratio as the distribution of ranges.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Answer.">Answer.<a class="anchor-link" href="#Answer.">&#182;</a></h3><p>0 cm and 100 cm have a probability that is exactly half that of any location between 20 cm and 80 cm.</p>
-<p>I ran a simulation of 10,000,000 grasshoppers.  The probability density function quickly converges to the expected trapezoidal shape.</p>
+<p>I ran a simulation of 10,000,000 grasshoppers, with locations randomly located from 0.0000 to 1.0000 meters (4 significant figures).  The probability density function quickly converges to the expected trapezoidal shape.</p>
 <video controls style = "padding: 0px; border: 0px;" src = "2022.06.10 Classic.mp4" />
 </div>
 </div>
