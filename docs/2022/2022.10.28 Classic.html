@@ -14266,15 +14266,17 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Let $t$ represent the the number of trick or treaters.</p>
 <p>I looked at a few "lazy" strategies first.</p>
-<h3 id="Give-150-trick-or-treaters-1-candy-each.">Give 150 trick-or-treaters 1 candy each.<a class="anchor-link" href="#Give-150-trick-or-treaters-1-candy-each.">&#182;</a></h3><p>Every trick-or-treater will receive candy, but any number of trick-or-treaters less than 150 will correspond to that many leftover candies</p>
-$$X(t) = \left[ \begin{array}{c} 150-t, 50 \le t \le 150 \end{array} \right]$$<p>The Expected Value is $\dfrac{\sum \limits _{x = 0}^{100} x}{101} = 50$.</p>
+<h3 id="Give-150-trick-or-treaters-1-candy-each.">Give 150 trick-or-treaters 1 candy each.<a class="anchor-link" href="#Give-150-trick-or-treaters-1-candy-each.">&#182;</a></h3><p>Every trick-or-treater will receive candy, but any number of trick-or-treaters less than 150 will correspond to that many leftover candies.</p>
+<p>X can be represented as:</p>
+$$X(t) = 150-t, 50 \le t \le 150$$<p>The Expected Value is $\dfrac{\sum \limits _{x = 0}^{100} x}{101} = 50$.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Give-50-trick-or-treaters-3-candies-each.">Give 50 trick-or-treaters 3 candies each.<a class="anchor-link" href="#Give-50-trick-or-treaters-3-candies-each.">&#182;</a></h3><p>There will never be leftover, but every trick-or-treater after the 50th will receive nothing.</p>
-$$X(t) = \left[ \begin{array}{c} t-50, 50 \le t \le 150 \end{array} \right]$$<p>The Expected Value is again $\dfrac{\sum \limits _{x = 0}^{100} x}{101} = 50$.</p>
+<p>X can be represented as:</p>
+$$X(t) = t-50, 50 \le t \le 150$$<p>The Expected Value is again $\dfrac{\sum \limits _{x = 0}^{100} x}{101} = 50$.</p>
 
 </div>
 </div>
@@ -14282,15 +14284,16 @@ $$X(t) = \left[ \begin{array}{c} t-50, 50 \le t \le 150 \end{array} \right]$$<p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Give-75-trick-or-treaters-2-candies-each.">Give 75 trick-or-treaters 2 candies each.<a class="anchor-link" href="#Give-75-trick-or-treaters-2-candies-each.">&#182;</a></h3><p>Any number of trick-or-treaters less than 75 will correspond to <em>twice</em> that many leftover candies.</p>
 <p>Every trick-or-treater after the 75th will receive nothing.</p>
-$$X(t) = \left[ \begin{array}{c} 2(75-t), 50 \le t \le 75 \\ t-75, 75 &lt; t \le 150 \end{array} \right]$$<p>The Expected Value is  $\dfrac{2\sum \limits _{x = 0}^{25} x + \sum \limits _{x = 0}^{75} x}{101} = \dfrac{3500}{101} \approx 34.65$.</p>
+<p>X can be represented as:</p>
+$$X(t) = \Bigg[ \begin{array}{c} 2(75-t), 50 \le t \le 75 \\ t-75, 75 &lt; t \le 150 \end{array}$$<p>The Expected Value is  $\dfrac{2\sum \limits _{x = 0}^{25} x + \sum \limits _{x = 0}^{75} x}{101} = \dfrac{3500}{101} \approx 34.65$.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>$X = 0$ exactly once, that is, when the number of trick-or-treaters matches that of your prediction of your strategy.  This leaves 100 nonzero values of X.  Since the sum of consecutive integers increases quadratically, the minimum expected value occurs when the numerator is two equal summations, which would be $\sum \limits _{x = 1}^{50} x$.</p>
+<h2 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h2><p>$X = 0$ exactly once, that is, when the number of trick-or-treaters matches that of the prediction in your strategy.  This leaves 100 nonzero values of X.  Since the sum of consecutive integers increases quadratically, the minimum expected value occurs when the numerator is two equal summations, which would be $\sum \limits _{x = 1}^{50} x$.</p>
 <p>The minimum Expected Value is $\dfrac{\sum \limits _{x = 1}^{50} x + \sum \limits _{x = 1}^{50} x}{101} = \dfrac{2550}{101} \approx 25.25$</p>
-<p>The strategy you should choose is any distribution such that the following are true :</p>
+<p>This corresponds to strategies which require two simple criteria:</p>
 <ol>
     <li> You plan for exactly 100 trick-or-treaters. </li>
     <li> You plan for the <em>last</em> 50 trick-or-treaters to receive only 1 candy each.</li>
@@ -14302,7 +14305,8 @@ $$X(t) = \left[ \begin{array}{c} 2(75-t), 50 \le t \le 75 \\ t-75, 75 &lt; t \le
     <li> ...</li>
     <li> The first 50 is some order of 24 receiving 3 each, 2 receiving 2 each, and 24 receiving 1 each.  The last 50 receive 1 each.</li>
     <li> The first 50 is some order of 25 receiving 3 each and 25 receiving 1 each.  The last 50 receive 1 each.</li>
-</ul>
+</ul><p>The <a href="https://oeis.org/A002426">total number of strategies to choose from</a> is the coefficient of $x^{100}$ in the expansion of $(x+x^2+x^3)^{50}$, or more simply the coefficient of $x^{50}$ in the expansion of $(1+x+x^2)^{50}$.</p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
