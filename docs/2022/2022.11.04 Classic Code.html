@@ -14395,21 +14395,23 @@ a.anchor-link {
              <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;#22A884FF&#39;</span><span class="p">,</span>
              <span class="n">markersize</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
              <span class="n">zorder</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot_date</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">DT</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">21</span><span class="p">),</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot_date</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">maxd</span><span class="p">,</span>
              <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">e</span> <span class="p">,</span>
              <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;#414487FF&#39;</span><span class="p">,</span>
              <span class="n">markersize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
              <span class="n">zorder</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">xaxis_date</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;Autumnal Equinox to Winter Solstice&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">DF</span><span class="p">(</span><span class="s1">&#39;%b </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">))</span>
 
-<span class="c1">#plt.setp(ax.get_xticklabels(), ha = &quot;right&quot;, rotation = 45)</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;Trees with Leaves Changing&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">PF</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">labelsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
 
- <span class="c1">#Annotations</span>
+<span class="c1">#Annotations</span>
 <span class="n">variables</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;36.79</span><span class="si">% o</span><span class="s2">f trees will&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">DT</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="mf">0.30</span><span class="p">)),</span>
              <span class="p">(</span><span class="s2">&quot;have changing leaves&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">DT</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="mf">0.28</span><span class="p">)),</span>
              <span class="p">(</span><span class="s2">&quot;at 15:41 on November 18th.&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">DT</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="mf">0.26</span><span class="p">))]</span>
