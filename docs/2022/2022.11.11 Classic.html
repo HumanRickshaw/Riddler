@@ -14271,7 +14271,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Points-are-on-the-Same-Side.">Points are on the Same Side.<a class="anchor-link" href="#Points-are-on-the-Same-Side.">&#182;</a></h3><p>This happens $\frac{1}{4}$ of the time.  The larger slice is 100% of the original sandwich.</p>
+<h3 id="Points-are-on-the-Same-Side.">Points are on the Same Side.<a class="anchor-link" href="#Points-are-on-the-Same-Side.">&#182;</a></h3><p>This happens $\frac{1}{4}$ of the time.  The larger piece is 100% of the original sandwich.</p>
 <p>Thus, the probability of a reasonable slice is 0 in this case.</p>
 
 </div>
@@ -14279,15 +14279,15 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Points-are-on-Adjacent-Sides.">Points are on Adjacent Sides.<a class="anchor-link" href="#Points-are-on-Adjacent-Sides.">&#182;</a></h3><p>This happens $\frac{1}{2}$ of the time.  The larger piece is a pentagon and the smaller piece is a triangle.</p>
-<p>The area of the can be represented as
+<p>The area of the piece can be represented as
 <br>
-$$\dfrac{1}{4} \le \dfrac{xy}{2}$$ 
+$$A = \dfrac{xy}{2} \ge \dfrac{1}{4}$$ 
 <br>
 where $0 \le x,y \le 1$.  Note that because of the definition of "reasonable", this is updated to $\frac{1}{2} \le x,y \le 1$.</p>
 <p>Assume $x$ is a fixed point at the horizontal base of the sandwich.  Feasible $y$ values are $\frac{2A}{x} \le y \le 1$.</p>
 <p>The probability that the piece is reasonable is:
 <br>
-$$\cdot\int\limits_{x=\frac{1}{2}}^{1} \left(1 - \dfrac{1}{2x}\right)dx$$
+$$\int\limits_{x=\frac{1}{2}}^{1} \left(1 - \dfrac{1}{2x}\right)dx$$
 <br>
 $$= x - \dfrac{1}{2}\ln(x)\bigg]_{\dfrac{1}{2}}^1$$
 <br>
@@ -14299,10 +14299,10 @@ $$= \dfrac{1}{2} + \dfrac{1}{2}\ln\left(\dfrac{1}{2}\right)$$</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Points-are-on-Opposite-Sides.">Points are on Opposite Sides.<a class="anchor-link" href="#Points-are-on-Opposite-Sides.">&#182;</a></h3><p>This happens $\frac{1}{4}$ of the time.  Both pieces are trapezoids, with trivial cases being triangles and rectangles.</p>
-<p>The area of the can be represented as
+<h3 id="Points-are-on-Opposite-Sides.">Points are on Opposite Sides.<a class="anchor-link" href="#Points-are-on-Opposite-Sides.">&#182;</a></h3><p>This happens $\frac{1}{4}$ of the time.  Both pieces are trapezoids, with a few scenarios being triangles and rectangles.</p>
+<p>The area of the piece can be represented as
 <br>
-$$\dfrac{1}{4} \le \dfrac{x_1+x_2}{2}$$ 
+$$A = \dfrac{x_1+x_2}{2} \ge \dfrac{1}{4}$$
 <br>
 where $0 \le x_1,x_2 \le 1$.  To achieve the smaller piece, let $0 \le x_1 \le \frac{1}{2}$.</p>
 <p>Feasible $x_2$ values are $\frac{1}{2}-x_1 \le x_2 \le 1$.  This can also happen for the other half of the base.</p>
@@ -14310,7 +14310,7 @@ where $0 \le x_1,x_2 \le 1$.  To achieve the smaller piece, let $0 \le x_1 \le \
 <br>
 $$2\cdot\int\limits_{x=0}^{\frac{1}{2}} \left(1 - \left(\dfrac{1}{2} - x\right)\right)dx$$
 <br>
-$$= x + x^2\big]_0^{\frac{1}{2}}$$
+$$= x + x^2\Big]_0^{\frac{1}{2}}$$
 <br>
 $$= \left(\dfrac{1}{2} + \dfrac{1}{4}\right) - (0 - 0) = \dfrac{3}{4}$$</p>
 
