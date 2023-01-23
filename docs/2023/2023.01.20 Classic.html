@@ -14274,13 +14274,13 @@ a.anchor-link {
 <p>A Scooter Path is the sum of its horizontal and vertical components.  Note that there are many possibilities to traverse a path with combinations of horizontal and vertical roads, but the total distance for each of horizontal and vertical remains the same for a specific destination.</p>
 <p>Using polar coordinates, the sum of all Scooter Paths can be represented as:</p>
 <p><br>
-$$8\cdot\int\limits_{r = 0}^{1} \int\limits_{\theta = 0}^{\frac{\pi}{4}} \left(r\sin \theta + r\cos \theta\right)d\theta dr$$
+$$8\cdot\int\limits_{r = 0}^{1} \int\limits_{\theta = 0}^{\frac{\pi}{4}} \left(r\sin \theta + r\cos \theta\right) \cdot d\theta \cdot dr$$
 <br>
-$$= 8\cdot\int\limits_{r = 0}^{1} \left(-r\cos \theta + r\sin \theta \bigg]_{0}^{\frac{\pi}{4}}\right)dr$$
+$$= 8\cdot\int\limits_{r = 0}^{1} \left(-r\cos \theta + r\sin \theta \bigg]_{0}^{\frac{\pi}{4}}\right) \cdot dr$$
 <br>
-$$= 8\cdot\int\limits_{r = 0}^{1} \left(\left(-\dfrac{1}{\sqrt{2}} + \dfrac{1}{\sqrt{2}}\right) - (-r + 0)\right)dr$$
+$$= 8\cdot\int\limits_{r = 0}^{1} \left(\left(-\dfrac{1}{\sqrt{2}} + \dfrac{1}{\sqrt{2}}\right) - (-r + 0)\right) \cdot dr$$
 <br>
-$$= 8\cdot\int\limits_{r = 0}^{1} rdr = 8\cdot\dfrac{r^2}{2}\bigg]_{0}^{1} = 4$$</p>
+$$= 8\cdot\int\limits_{r = 0}^{1} r \cdot dr = 8\cdot\dfrac{r^2}{2}\bigg]_{0}^{1} = 4$$</p>
 
 </div>
 </div>
@@ -14289,11 +14289,11 @@ $$= 8\cdot\int\limits_{r = 0}^{1} rdr = 8\cdot\dfrac{r^2}{2}\bigg]_{0}^{1} = 4$$
 <p>A Drone Path is simply the shortest distance to the destination.</p>
 <p>The sum of all Drone Paths can be represented as</p>
 <p><br>
-$$8\cdot\int\limits_{r = 0}^{1} \int\limits_{\theta = 0}^{\frac{\pi}{4}} rd\theta dr$$
+$$8\cdot\int\limits_{r = 0}^{1} \int\limits_{\theta = 0}^{\frac{\pi}{4}} r \cdot d\theta \cdot dr$$
 <br>
-$$= 8\cdot\int\limits_{r = 0}^{1} r\theta \big]_{0}^{\frac{\pi}{4}}dr$$
+$$= 8\cdot\int\limits_{r = 0}^{1} r\theta \Big]_{0}^{\frac{\pi}{4}} \cdot dr$$
 <br>
-$$= 8\cdot\int\limits_{r = 0}^{1} \dfrac{\pi r}{4} = 8\cdot\dfrac{\pi r^2}{8}\bigg]_{0}^{1} = \pi$$</p>
+$$= 8\cdot\int\limits_{r = 0}^{1} \dfrac{\pi r}{4} \cdot dr = 8\cdot\dfrac{\pi r^2}{8}\bigg]_{0}^{1} = \pi$$</p>
 
 </div>
 </div>
@@ -14319,15 +14319,15 @@ $$\dfrac{\dfrac{1}{\pi}}{\dfrac{1}{4}} = \dfrac{4}{\pi} \approx 1.2732$$</p>
 <p>The diagonal distance is $\sqrt{2}y$.  The remaining horizontal distance is $x-y$.</p>
 <p>The sum of all Scooter Paths can be represented as:</p>
 <p><br>
-$$8\cdot\int\limits_{r = 0}^{1} \int\limits_{\theta = 0}^{\frac{\pi}{4}} \left(\sqrt{2}r\sin \theta + r(\cos \theta-\sin \theta)\right)d\theta dr$$
+$$8\cdot\int\limits_{r = 0}^{1} \int\limits_{\theta = 0}^{\frac{\pi}{4}} \left(\sqrt{2}r\sin \theta + r(\cos \theta-\sin \theta)\right) \cdot d\theta \cdot dr$$
 <br>
-$$8\cdot\int\limits_{r = 0}^{1} \int\limits_{\theta = 0}^{\frac{\pi}{4}} r\left((\sqrt{2}-1)\sin \theta + \cos \theta\right)d\theta dr$$
+$$8\cdot\int\limits_{r = 0}^{1} \int\limits_{\theta = 0}^{\frac{\pi}{4}} r\left((\sqrt{2}-1)\sin \theta + \cos \theta\right) \cdot d\theta \cdot dr$$
 <br>
-$$= 8\cdot\int\limits_{r = 0}^{1} r\left(-(\sqrt{2}-1)\cos \theta + \sin \theta \bigg]_{0}^{\frac{\pi}{4}}\right)dr$$
+$$= 8\cdot\int\limits_{r = 0}^{1} r\left(-(\sqrt{2}-1)\cos \theta + \sin \theta \bigg]_{0}^{\frac{\pi}{4}}\right) \cdot dr$$
 <br>
-$$= 8\cdot\int\limits_{r = 0}^{1} r\left(\left(-(\sqrt{2}-1)\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}\right) - \left(-(\sqrt{2}-1)1 + 0\right)\right)dr$$
+$$= 8\cdot\int\limits_{r = 0}^{1} r\left(\left(-(\sqrt{2}-1)\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}\right) - \left(-(\sqrt{2}-1)1 + 0\right)\right) \cdot dr$$
 <br>
-$$= 8\cdot\int\limits_{r = 0}^{1} r(2\sqrt{2}-2)dr = 8\cdot(2\sqrt{2}-2)\dfrac{r^2}{2}\bigg]_{0}^{1} = 8\sqrt{2}-8$$</p>
+$$= 8\cdot\int\limits_{r = 0}^{1} r(2\sqrt{2}-2) \cdot dr = 8\cdot(2\sqrt{2}-2)\dfrac{r^2}{2}\bigg]_{0}^{1} = 8\sqrt{2}-8$$</p>
 
 </div>
 </div>
