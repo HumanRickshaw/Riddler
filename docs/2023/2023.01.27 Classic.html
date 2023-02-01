@@ -14264,9 +14264,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>In order to maximize chances of victory, the availability to have a slot remaining for any letter is critical.  Since that is impossible all cases, eliminating availability should ensure a greater chance of victory than being entirely enclusive.</p>
-<p>Look forward to the case of two letters remaining, and two consecutive slots are available for $l$ consecutive letters.</p>
-<p>Suppose the strategy is for the first $k$ letters to be places in the first slot, and the remaining $l-k$ letters be placed in the second.  If a letter is placed in the first slot, any letter <em>before</em> it will result in a loss if chosen next.  Similarly, if a letter is placed in the second slot, any letter <em>after</em> it will result in a loss if chosen next.
+<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Look forward to the case of two letters remaining, and two consecutive slots are available for $l$ consecutive letters.</p>
+<p>Suppose the strategy is for the first $k$ letters to be placed in the first slot, and the remaining $l-k$ letters be placed in the second.  If a letter is placed in the first slot, any letter <em>before</em> it will result in a loss if chosen next.  Similarly, if a letter is placed in the second slot, any letter <em>after</em> it will result in a loss if chosen next.
 The losses incurred by splitting at $k$ can be represented as:</p>
 $$L(k) = \sum \text{First slot losses} + \sum\text{Second slot losses}$$<p><br>
 $$L(k) = \sum_{n=1}^k (n-1) + \sum_{n=1}^{l-k} (n-1)$$
