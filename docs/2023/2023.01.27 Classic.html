@@ -14264,32 +14264,70 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Look forward to the case of two letters remaining, and two consecutive slots are available for $l$ consecutive letters.</p>
-<p>Suppose the strategy is for the first $k$ letters to be placed in the first slot, and the remaining $l-k$ letters be placed in the second.  If a letter is placed in the first slot, any letter <em>before</em> it will result in a loss if chosen next.  Similarly, if a letter is placed in the second slot, any letter <em>after</em> it will result in a loss if chosen next.
-The losses incurred by splitting at $k$ can be represented as:</p>
-$$L(k) = \sum \text{First slot losses} + \sum\text{Second slot losses}$$<p><br>
-$$L(k) = \sum_{n=1}^k (n-1) + \sum_{n=1}^{l-k} (n-1)$$
+<h2 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h2><p>Consider placing a letter in the 1<sup>st</sup> slot vs 2<sup>nd</sup> slot.</p>
+<ul>
+    <li>Let the letter be the $k$<sup>th</sup> letter from $1$<sup>st</sup> to $l$<sup>th</sup></li>
+    <li>There are $l-1$ letters remaining for $s-1$ slots.</li>
+    <li>If placing in $1$<sup>st</sup> slot:
+        <ul>
+        <li>The $1$<sup>st</sup> to $k-1$<sup>st</sup> are no longer viable letters.</li>
+        <li>The $k+1$<sup>st</sup> to $l$<sup>th</sup> letters are to be placed in the $2$<sup>nd</sup> to $s$<sup>th</sup> slots.</li>
+       </ul>
+    </li>
+    <li>If placing in $2$<sup>nd</sup> slot:
+        <ul>
+        <li>The $1$<sup>st</sup> to $k-1$<sup>st</sup> letters are to be placed in the $1$<sup>st</sup> slot.
+        <li>The $k+1$<sup>st</sup> to $l$<sup>th</sup> letters are to be placed in the $3$<sup>rd</sup> to $s$<sup>th</sup> slots.</li>
+       </ul>
+    </li>
+</ul>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Let us find the value of $k$ for which placing in $1$<sup>st</sup> slot is better than placing in $2$<sup>nd</sup> slot:
 <br>
-$$L(k) = \dfrac{k(k-1)}{2} + \dfrac{(l-k)(l-k-1)}{2}$$
 <br>
-$$L(k) = \dfrac{(k^2 - k) + (l^2-2kl+k^2-l+k)}{2}$$
+$${{l-(k+1)} \choose {s-1}} &gt; {{k-1} \choose {1}} \cdot {{l-(k+1)} \choose {s-2}}$$
 <br>
-$$L(k) = \dfrac{l^2-2kl+2k^2-l}{2}$$
+$$\dfrac{\big(l-(k+1)\big)!}{\big(l-(k+1)-(s-1)\big)!(s-1)!} &gt; \dfrac{(k-1)\cdot\big(l-(k+1)\big)!}{\big(l-(k+1)-(s-2)\big)!(s-2)!}$$
 <br>
-Taking the first derivate to find the minimum value,
+$$\dfrac{1}{s-1} &gt; \dfrac{k-1}{l-(k+1)-(s-2)}$$
 <br>
-$$L'(k) = 0 = -l+2k$$
+$$l-k-1-s+2 &gt; k(s-1)-1(s-1)$$
 <br>
-$$ k = \dfrac{l}{2}$$
+$$l-s+1 +1(s-1) &gt; k(s-1)+k$$
 <br>
-The minimum losses occur when the split is as close to even as possible.  Note that the probability of losses can be found by multiplying by $\dfrac{1}{l-1}$, or the number of letters to choose from.</p>
+$$l &gt; ks$$
+<br>
+$$k &lt; \dfrac{l}{s}$$</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I wrote some code with a major assumption: divide remaining consecutive slots for letters to be placed with range of letter placements that are equal.</p>
-<p>While I showed this to be true for 2 consecutive slots, I am not convinced it is for 3, 4, or 5.</p>
+<p>Let us find the value of $k$ for which placing in $2$<sup>nd</sup> slot is better than placing in $3$<sup>rd</sup> slot:
+<br>
+<br>
+$${{k-1} \choose {1}} \cdot \cdot {{l-(k+1)} \choose {s-2}} &gt; {{k-1} \choose {2}} \cdot {{l-(k+1)} \choose {s-3}}$$
+<br>
+$$\dfrac{(k-1)\cdot\big(l-(k+1)\big)!}{\big(l-(k+1)-(s-2)\big)!(s-2)!} &gt; \dfrac{(k-1)\cdot(k-2)\cdot\big(l-(k+1)\big)!}{2\big(l-(k+1)-(s-3)\big)!(s-3)!}$$
+<br>
+$$\dfrac{1}{s-2} &gt; \dfrac{k-2}{2-(2k+2)-(2s-6)}$$
+<br>
+$$2l-2k-2-2s+6 &gt; k(s-2)-2(s-2)$$
+<br>
+$$2l-2s+4 + 2(s-2) &gt; k(s-2)+2k$$
+<br>
+$$2l &gt; ks$$
+<br>
+$$k &lt; \dfrac{2l}{s}$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>It seems that dividing letters into even ranges by consecutive slots holds true.</p>
 <p>My code generated all $26 \choose 5$ sequences of five unique letters.  For each sequence:</p>
 <ol>
     <li>Start with a blank set of ranges for each slot.</li>
